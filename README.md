@@ -1,24 +1,56 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# テーブル設計
 
-Things you may want to cover:
+## prefectures table
 
-* Ruby version
+### Association
+- has-one :recruitment
 
-* System dependencies
 
-* Configuration
+## users table
 
-* Database creation
+| Column                 | Type    | Options                   |
+| ---------------------- | ------- | ------------------------- |
+| nickname               | string  | null: false               |
+| email                  | string  | null: false, unique: true |
+| encrypted_password     | string  | null: false               |
+| age                    | string  |                           |
+| years_of_experience_id | integer |                           |
+| introduction           | text    |                           |
 
-* Database initialization
+### Association
+- has_many :recruitments
+- has_many :comments
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## recruitments table
 
-* Deployment instructions
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| event-date       | date       | null: false                    |
+| start_time       | integer    | null: false                    |
+| end_time         | integer    | null: false                    |
+| place_id         | integer    | null: false                    |
+| category_id      | integer    | null: false                    |
+| description      | text       | null: false                    |
+| prefecture       | references | null: false, foreign_key: true |
+| user             | references | null: false, foreign_key: true |
 
-* ...
+### Association
+- belongs_to :prefecture
+- belongs_to :user
+- has_many :comments
+
+
+## commentsテーブル
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| text        | text       | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| recruitment | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :recruitment
