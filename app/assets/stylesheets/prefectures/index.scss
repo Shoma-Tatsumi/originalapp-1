@@ -4,15 +4,12 @@ a {
 
 .main {
   background: white;
-  // background-image: image-url('fotsal01.png');
   display: flex;
   justify-content: space-between;
 }
 
 /* application説明 */
 .app-description {
-  // background-color: darkseagreen;
-  color: darkcyan;
   height: 90vh;
   width: 50vw;
 }
@@ -28,6 +25,7 @@ a {
 }
 
 .description-text {
+  color: darkcyan;
 }
 
 .list-pict {
@@ -45,6 +43,7 @@ a {
 }
 
 .map-text {
+  color: darkcyan;
   height: 50px;
 }
 
