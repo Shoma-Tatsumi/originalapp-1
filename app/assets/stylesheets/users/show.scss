@@ -2,3 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user-page {
+  display: flex;
+  height: 90vh;
+}
+
+.user-info {
+  border-right: 2px solid burlywood;
+  width: 40vw;
+  padding: 0 20px;
+}
+
+.user-icon {
+  height: 40vh;
+  border-bottom: 2px solid cornflowerblue;
+}
+
+.user-details {
+  height: 50vh;
+  padding: 20px;
+}
+
+.post-lists {
+  width: 60vw;
+}
