@@ -2,10 +2,74 @@
 <div class="user-page">
   <div class="user-info">
     <div class="user-icon">
+      <%= image_tag "icon01.png", class:"icon-pict" %>
+      <p class="user-icon-nickname"><%= current_user.nickname %></p>
     </div>
     <div class="user-details">
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">年齢</th>
+          <td class="detail-value"><%= current_user.age %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">経験年数</th>
+          <td class="detail-value"><%= current_user.years_of_experience.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">紹介文</th>
+          <td class="detail-value-intro"><%= current_user.introduction %></td>
+        </tr>
+      </tbody>
+    </table>
+    <%# if current_user.id == @item.user_id %>
+      <%= link_to "編集", root_path, method: :get, class: "user-edit-btn" %>
     </div>
   </div>
-  <div class="post-lists">
+  <div class="post-contents">
+    <div class="post-header">
+      <h2>投稿一覧</h2> 
+    </div>
+    <ul class="post-lists">
+      <%# @recruitments.each do |recruitment| %>
+      <li class='list'>
+        <div class="content">
+          <div class="date">日付</div>
+          <div class="time">時間</div>
+          <div class="place">場所</div>
+        </div>
+      </li>
+      <%# end %>
+      <%# 仮置き %>
+      <li class='list'>
+        <div class="content">
+          <div class="date">日付</div>
+          <div class="time">時間</div>
+          <div class="place">場所</div>
+        </div>
+      </li>
+      <li class='list'>
+        <div class="content">
+          <div class="date">日付</div>
+          <div class="time">時間</div>
+          <div class="place">場所</div>
+        </div>
+      </li>
+      <li class='list'>
+        <div class="content">
+          <div class="date">日付</div>
+          <div class="time">時間</div>
+          <div class="place">場所</div>
+        </div>
+      </li>
+      <li class='list'>
+        <div class="content">
+          <div class="date">日付</div>
+          <div class="time">時間</div>
+          <div class="place">場所</div>
+        </div>
+      </li>
+      <%# 仮置き %>
+    </ul>
   </div>
 </div>

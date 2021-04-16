@@ -8,14 +8,26 @@
 }
 
 .user-info {
-  border-right: 2px solid burlywood;
+  border-right: 2px solid #dedede;
   width: 40vw;
   padding: 0 20px;
 }
 
 .user-icon {
-  height: 40vh;
-  border-bottom: 2px solid cornflowerblue;
+  height: 25vh;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #dedede;
+}
+
+.icon-pict {
+  margin: 10px auto;
+  display: block;
+}
+
+.user-icon-nickname {
+  font-size: 20px;;
+  color: black;
 }
 
 .user-details {
@@ -23,6 +35,89 @@
   padding: 20px;
 }
 
-.post-lists {
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value-intro {
+  height: 200px;
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+  word-break: break-word;
+}
+
+.user-edit-btn {
+  display: block;
+  text-align: center;
+  background-color: darkcyan;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  width: 15vw;
+  margin: 20px auto;
+  padding: 2vh 5vw;
+}
+
+.post-contents {
   width: 60vw;
+  padding: 0 20px;
+}
+
+.post-header {
+  height: 10vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.post-header h2 {
+  font-size: 25px;
+  margin: 0 auto;
+  border-bottom: 2px solid red;
+}
+
+.post-lists {
+  height: 70vh;
+  padding: 20px;
+}
+
+.list {
+  border: 1px solid #dedede;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  padding: 5px;
+}
+
+.date {
+  margin-left: 10px;
+}
+.time {
+  margin-left: 10px;
+}
+.place {
+  margin-left: 10px;
 }
