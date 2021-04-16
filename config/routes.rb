@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :prefectures, only: :index do
     resources :recruitments, only: :index
   end
+  resources :users, only: :show
 end

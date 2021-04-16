@@ -1,6 +1,6 @@
 class YearsOfExperience < ActiveHash::Base
   self.data = [
-    { id: 0, name: '選択してください' },
+    { id: 0, name: ' ' },
     { id: 1, name: '初心者' },
     { id: 2, name: '3年未満' },
     { id: 3, name: '3年以上6年未満' },
