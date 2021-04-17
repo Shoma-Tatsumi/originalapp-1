@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 <div class="user-page">
   <div class="user-info">
+    <%# User details %>
     <div class="user-icon">
       <%= image_tag "icon01.png", class:"icon-pict" %>
       <p class="user-icon-nickname"><%= current_user.nickname %></p>
@@ -26,6 +27,7 @@
       <%= link_to "編集", root_path, method: :get, class: "user-edit-btn" %>
     </div>
   </div>
+  <%# User posts contents %>
   <div class="post-contents">
     <div class="post-header">
       <h2>投稿一覧</h2> 
