@@ -9,8 +9,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :password,
-            format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i, message: 'Include both letters and numbers.' }
+            format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i, message: 'Include both letters and numbers.' }, on: :create
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :years_of_experience
+  
 end

@@ -2,12 +2,12 @@
 <div class='account-page' id='account-page'>
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
-      <h2>Create Account</h2>
-      <h5>新規アカウントの作成</h5>
-      <%=link_to 'ログイン済みの方はこちら', new_user_session_path, class: 'nav-login'%>
+      <h2>Edit Account</h2>
+      <h5>マイページ編集</h5>
+      <%=link_to 'マイページへ戻る', :back, class: 'nav-login'%>
     </div>
     <div class='account-page__inner--right user-form'>
-      <%= form_with model: @user, url: user_registration_path, local: true do |f|%>
+      <%= form_with model: current_user, local: true do |f| %>
         <%= render "shared/error_messages", model: f.object %>
         <div class='field'>
           <div class='field-label'>
@@ -25,25 +25,6 @@
           </div>
           <div class='field-input'>
             <%= f.email_field :email, placeholder:"PC・携帯どちらでも可"%>
-          </div>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :password, "パスワード"%>
-            <span class="indispensable">必須</span>
-            <%# <i>(英数字6文字以上)</i> %>
-          </div>
-          <div class='field-input'>
-            <%= f.password_field :password, placeholder:"半角英数字6文字以上", autocomplete: "off"%>
-          </div>
-        </div>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :password_confirmation, "確認用パスワード"%>
-            <span class="indispensable">必須</span>
-          </div>
-          <div class='field-input'>
-            <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力してください", autocomplete: "off"%>
           </div>
         </div>
         <div class='field'>
@@ -71,7 +52,7 @@
           </div>
         </div>
         <div class='actions'>
-          <%= f.submit "Create Account", class: 'btn'%>
+          <%= f.submit "Update", class: 'btn'%>
         </div>
       </div>
     <% end %>
