@@ -13,5 +13,4 @@ class User < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :years_of_experience
-  
 end

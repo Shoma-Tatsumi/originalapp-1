@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :prefectures, only: :index do
     resources :recruitments, only: :index
   end
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: %i[show edit update]
 end
