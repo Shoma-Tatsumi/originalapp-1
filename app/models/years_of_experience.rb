@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class YearsOfExperience < ActiveHash::Base
   self.data = [
     { id: 0, name: ' ' },
