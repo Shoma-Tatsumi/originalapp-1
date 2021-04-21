@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   validates :password,
             format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i, message: 'Include both letters and numbers.' }, on: :create
-  
+
   validates :age, numericality: { only_integer: true, message: 'Half-width number' }
 
   extend ActiveHash::Associations::ActiveRecordExtensions

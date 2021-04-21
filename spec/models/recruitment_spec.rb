@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Recruitment, type: :model do
   before do
     user = FactoryBot.create(:user)
     @recruitment = FactoryBot.build(:recruitment, user_id: user.id)
-    
   end
 
   describe '新規募集' do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Recruitment < ApplicationRecord
   belongs_to :user
 
@@ -19,9 +21,7 @@ class Recruitment < ApplicationRecord
   validates :category_id, numericality: { other_than: 0, message: 'Select' }
 
   def event_date_cannot_be_in_the_past
-    if event_date.present? && event_date < Date.today
-      errors.add(:event_date, "can't select a date in the past")
-    end
+    errors.add(:event_date, "can't select a date in the past") if event_date.present? && event_date < Date.today
   end
 
   def start_end_time

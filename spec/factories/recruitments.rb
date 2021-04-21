@@ -1,4 +1,6 @@
-require "date"
+# frozen_string_literal: true
+
+require 'date'
 
 FactoryBot.define do
   factory :recruitment do

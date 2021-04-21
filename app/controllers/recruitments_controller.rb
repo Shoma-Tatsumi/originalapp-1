@@ -20,7 +20,10 @@ class RecruitmentsController < ApplicationController
   end
 
   private
+
   def recruitment_params
-    params.require(:recruitment).permit(:event_date, :start_time, :end_time, :place, :number_of_people, :category_id, :description).merge(user_id: current_user.id, prefecture_id: params[:prefecture_id])
+    params.require(:recruitment).permit(:event_date, :start_time, :end_time, :place, :number_of_people, :category_id, :description).merge(
+      user_id: current_user.id, prefecture_id: params[:prefecture_id]
+    )
   end
 end
