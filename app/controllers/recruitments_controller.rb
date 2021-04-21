@@ -3,7 +3,7 @@
 class RecruitmentsController < ApplicationController
   def index
     @prefecture_id = params[:prefecture_id].to_i
-    @recruitments = Recruitment.all.order('created_at DESC')
+    @recruitments = Recruitment.where(prefecture_id: @prefecture_id)
   end
 
   def new
