@@ -1,0 +1,101 @@
+.recruiting-page .recruiting-page__inner {
+  width: 980px;
+  margin: 60px auto;
+  padding: 60px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.recruiting-page .recruiting-page__inner .recruiting-page__inner--left, .recruiting-page .recruiting-page__inner .recruiting-page__inner--right {
+  float: left;
+  width: 50%;
+}
+.recruiting-page .recruiting-page__inner:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.recruiting-page .recruiting-page__header h2 {
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 38px;
+  font-weight: 200;
+}
+.recruiting-page .recruiting-page__header h2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin-top: 5px;
+  border-bottom: 1px solid #38aef0;
+}
+.recruiting-page .recruiting-page__header h5 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.recruiting-page .recruiting-page__header .nav-login, .recruiting-page .recruiting-page__header .nav-index{
+  color: black;
+  font-size: 14px;
+}
+
+.recruiting-page .field {
+  margin-bottom: 10px;
+}
+
+.recruiting-page .field .field-label {
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.recruiting-page .field .field-label .indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.recruiting-page .field .field-input input {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+.recruiting-page .select-box {
+  width:429px;
+  height: 48px;
+  padding: 10px;
+}
+
+.recruiting-page .form-text-area {
+  resize: vertical;
+  width:429px;
+  height: 150px;
+  min-height:100px;
+  max-height:300px;
+  padding: 10px;
+}
+
+/* 下部ボタン */
+.recruiting-page .btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+}
+.recruiting-page input[type=submit] {
+  float: left;
+  margin-top: 20px;
+  color: #fff;
+  background-color: darkcyan;
+}
+
