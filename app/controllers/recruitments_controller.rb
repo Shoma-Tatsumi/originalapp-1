@@ -3,7 +3,7 @@
 class RecruitmentsController < ApplicationController
   def index
     @prefecture_id = params[:prefecture_id].to_i
-    @recruitments = Recruitment.where(prefecture_id: @prefecture_id)
+    @recruitments = Recruitment.where(prefecture_id: @prefecture_id).page(params[:page]).per(5)
   end
 
   def new

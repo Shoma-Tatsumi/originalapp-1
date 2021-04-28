@@ -1,4 +1,92 @@
-.purchase-btn {
+.post-contents {
+  padding: 0 20px;
+}
+
+.post-header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+.post-header h2 {
+  font-size: 25px;
+  margin: 0 auto;
+  border-bottom: 2px solid red;
+}
+
+.post-lists {
+  width: 50vw;
+  height: 90vh;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.list {
+  border: 2px solid #dedede;
+  height: 130px;
+  margin-bottom: 20px;
+}
+
+.content {
+  padding: 5px;
+}
+
+.content-header {
+  display: flex;
+  height: 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.content-info {
+  margin-left: 10px;
+}
+
+.created-at {
+  margin-left: 10px;
+}
+
+.date {  
+  margin-left: 10px;
+}
+.time {
+  margin-left: 10px;
+}
+.place {
+  margin-left: 10px;
+}
+
+.details-icon {
+  text-align: center;
+}
+
+.fa-angle-double-down {
+}
+
+// pagination
+.pagination {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.page {
+  text-align: center;
+  // border: 1px solid darkcyan;
+  padding: 5px;
+}
+
+.first {
+  // border: 1px solid darkcyan;
+  padding: 5px;
+}
+
+.prev {
+  // border: 1px solid darkcyan;
+  padding: 5px;
+}
+
+// 新規募集button
+.recruiting-btn {
   width: 120px;
   background: darkcyan;
   text-align: center;
@@ -9,7 +97,7 @@
   padding: 15px;
 }
 
-.purchase-btn-text {
+.recruiting-btn-text {
   color: #fff;
   display: block;
   font-size: 18px;
@@ -17,6 +105,12 @@
   margin-bottom: 5px;
 }
 
-.purchase-btn-icon {
+.recruiting-btn-icon {
   width: 60%;
+}
+
+.text_inner {
+  font-size: 20px;
+  background-color: #EAD9FF;
+  height: 100px;
 }

@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  def show; end
+  def show
+    @user = User.find(params[:id])
+    @recruitments = Recruitment.where(user_id: @user.id).page(params[:page]).per(5)
+  end
 
   def edit; end
 

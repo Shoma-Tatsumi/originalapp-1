@@ -78,46 +78,45 @@
   padding: 2vh 5vw;
 }
 
-.post-contents {
+.user-page .user-post-contents {
   width: 60vw;
   padding: 0 20px;
 }
 
-.post-header {
+.user-page .user-post-header {
   height: 10vh;
   display: flex;
   justify-items: center;
   align-items: center;
 }
 
-.post-header h2 {
+.user-page .user-post-header h2 {
   font-size: 25px;
   margin: 0 auto;
   border-bottom: 2px solid red;
 }
 
-.post-lists {
+.user-page .post-lists {
   height: 70vh;
   padding: 20px;
 }
 
-.list {
+.user-page .list {
   border: 1px solid #dedede;
-  height: 100px;
+  height: 110px;
   margin-bottom: 20px;
 }
 
-.content {
-  display: flex;
+.user-page .content {
   padding: 5px;
 }
 
-.date {
-  margin-left: 10px;
-}
-.time {
-  margin-left: 10px;
-}
-.place {
-  margin-left: 10px;
-}
+// .user-page .date {
+//   margin-left: 10px;
+// }
+// .user-page .time {
+//   margin-left: 10px;
+// }
+// .user-page .place {
+//   margin-left: 10px;
+// }

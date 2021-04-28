@@ -4,74 +4,51 @@
     <%# User details %>
     <div class="user-icon">
       <%= image_tag "icon01.png", class:"icon-pict" %>
-      <p class="user-icon-nickname"><%= current_user.nickname %></p>
+      <p class="user-icon-nickname"><%= @user.nickname %></p>
     </div>
     <div class="user-details">
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-item">年齢</th>
-          <td class="detail-value"><%= current_user.age %></td>
+          <td class="detail-value"><%= @user.age %></td>
         </tr>
         <tr>
           <th class="detail-item">経験年数</th>
-          <td class="detail-value"><%= current_user.years_of_experience.name %></td>
+          <td class="detail-value"><%= @user.years_of_experience.name %></td>
         </tr>
         <tr>
           <th class="detail-item">紹介文</th>
-          <td class="detail-value-intro"><%= current_user.introduction %></td>
+          <td class="detail-value-intro"><%= @user.introduction %></td>
         </tr>
       </tbody>
     </table>
-    <%# if current_user.id == @item.user_id %>
-      <%= link_to "編集", edit_user_path(current_user.id), class: "user-edit-btn" %>
+    <% if current_user.id == @user.id %>
+      <%= link_to "編集", edit_user_path(@user.id), class: "user-edit-btn" %>
+    <% end %>
     </div>
   </div>
   <%# User posts contents %>
-  <div class="post-contents">
-    <div class="post-header">
+  <div class="user-post-contents">
+    <div class="user-post-header">
       <h2>投稿一覧</h2> 
     </div>
     <ul class="post-lists">
-      <%# @recruitments.each do |recruitment| %>
+      <% @recruitments.each do |recruitment| %>
       <li class='list'>
         <div class="content">
-          <div class="date">日付</div>
-          <div class="time">時間</div>
-          <div class="place">場所</div>
+          <div class="date">日付: <%= recruitment.event_date %></div>
+          <div class="time">時刻: <%= l recruitment.start_time, format: :short %> ~ <%= l recruitment.end_time, format: :short %></div>
+          <div class="place">場所: <%= recruitment.place %></div>
+        </div>
+        <div class="details-icon">
+          <%= link_to '#' do %>
+            <i class="fas fa-angle-double-down"></i>
+          <% end %>
         </div>
       </li>
-      <%# end %>
-      <%# 仮置き %>
-      <li class='list'>
-        <div class="content">
-          <div class="date">日付</div>
-          <div class="time">時間</div>
-          <div class="place">場所</div>
-        </div>
-      </li>
-      <li class='list'>
-        <div class="content">
-          <div class="date">日付</div>
-          <div class="time">時間</div>
-          <div class="place">場所</div>
-        </div>
-      </li>
-      <li class='list'>
-        <div class="content">
-          <div class="date">日付</div>
-          <div class="time">時間</div>
-          <div class="place">場所</div>
-        </div>
-      </li>
-      <li class='list'>
-        <div class="content">
-          <div class="date">日付</div>
-          <div class="time">時間</div>
-          <div class="place">場所</div>
-        </div>
-      </li>
-      <%# 仮置き %>
+      <% end %>
+      <%= paginate @recruitments %>
     </ul>
   </div>
 </div>

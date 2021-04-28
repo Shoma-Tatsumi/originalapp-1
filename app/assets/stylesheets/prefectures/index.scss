@@ -6,6 +6,7 @@ a {
   background: white;
   display: flex;
   justify-content: space-between;
+  background-image: image-url('background01.png');
 }
 
 /* application説明 */
@@ -38,7 +39,6 @@ a {
   box-sizing: border-box;
   margin: auto;
   display: table;
-  background-color: white;
   text-align: center;
 }
 
