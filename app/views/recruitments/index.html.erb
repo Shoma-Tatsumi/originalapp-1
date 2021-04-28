@@ -1,5 +1,30 @@
 <%= render "shared/header" %>
-<%= link_to new_prefecture_recruitment_path, class: 'purchase-btn' do %>
-  <span class='purchase-btn-text'>PLAY</span>
-  <%= image_tag 'icon02.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<div class="post-contents">
+  <div class="post-header">
+    <h2>募集一覧</h2> 
+  </div>
+  <ul class="post-lists">
+    <% @recruitments.each do |recruitment| %>
+      <li class='list' id="lists">
+        <div class="content">
+          <div class='content-header'>
+            <%=link_to recruitment.user.nickname, user_path(recruitment.user_id), class: 'recruiting-user' %>
+            <div class='created-at'>投稿日時: <%= l recruitment.created_at %></div>
+          </div>
+          <div class="content-info">
+            <div class="date">日付: <%= recruitment.event_date %></div>
+            <div class="time">時刻: <%= l recruitment.start_time, format: :short %> ~ <%= l recruitment.end_time, format: :short %></div>
+            <div class="place">場所: <%= recruitment.place %></div>
+          </div>
+        </div>
+      </li>
+    <% end %>
+    <%= paginate @recruitments %>
+  </ul>
+  
+</div>
+
+<%= link_to new_prefecture_recruitment_path, class: 'recruiting-btn' do %>
+  <span class='recruiting-btn-text'>PLAY</span>
+  <%= image_tag 'icon02.png' , size: '185x50' ,class: "recruiting-btn-icon" %>
 <% end %>
