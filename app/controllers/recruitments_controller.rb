@@ -19,6 +19,9 @@ class RecruitmentsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def recruitment_params
