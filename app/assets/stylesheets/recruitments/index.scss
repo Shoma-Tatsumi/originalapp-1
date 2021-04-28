@@ -15,31 +15,30 @@
 }
 
 .post-lists {
-  width: 70vw;
+  width: 50vw;
   height: 90vh;
   padding: 20px;
   margin: 0 auto;
 }
 
 .list {
-  border: 1px solid #dedede;
-  height: 100px;
+  border: 2px solid #dedede;
+  height: 130px;
   margin-bottom: 20px;
 }
 
 .content {
   padding: 5px;
-  display: flex;
-
 }
 
 .content-header {
   display: flex;
+  height: 20px;
   margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .content-info {
-  display: flex;
   margin-left: 10px;
 }
 
@@ -47,14 +46,21 @@
   margin-left: 10px;
 }
 
-.date {
-  
+.date {  
+  margin-left: 10px;
 }
 .time {
-
+  margin-left: 10px;
 }
 .place {
+  margin-left: 10px;
+}
 
+.details-icon {
+  text-align: center;
+}
+
+.fa-angle-double-down {
 }
 
 // pagination
@@ -101,4 +107,10 @@
 
 .recruiting-btn-icon {
   width: 60%;
+}
+
+.text_inner {
+  font-size: 20px;
+  background-color: #EAD9FF;
+  height: 100px;
 }

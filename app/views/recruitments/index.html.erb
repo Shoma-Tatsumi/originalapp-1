@@ -16,12 +16,16 @@
             <div class="time">時刻: <%= l recruitment.start_time, format: :short %> ~ <%= l recruitment.end_time, format: :short %></div>
             <div class="place">場所: <%= recruitment.place %></div>
           </div>
+          <div class="details-icon">
+            <%= link_to '#' do %>
+             <i class="fas fa-angle-double-down"></i>
+            <% end %>
+          </div>
         </div>
       </li>
     <% end %>
     <%= paginate @recruitments %>
   </ul>
-  
 </div>
 
 <%= link_to new_prefecture_recruitment_path, class: 'recruiting-btn' do %>
