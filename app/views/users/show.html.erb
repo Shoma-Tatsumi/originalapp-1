@@ -42,7 +42,7 @@
           <div class="place">場所: <%= recruitment.place %></div>
         </div>
         <div class="details-icon">
-          <%= link_to '#' do %>
+          <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}" do %>
             <i class="fas fa-angle-double-down"></i>
           <% end %>
         </div>
