@@ -78,6 +78,10 @@
   padding: 2vh 5vw;
 }
 
+.fa-user-edit::before {
+  margin-right: 5px;
+}
+
 .user-page .user-post-contents {
   width: 60vw;
   padding: 0 20px;
@@ -110,13 +114,3 @@
 .user-page .content {
   padding: 5px;
 }
-
-// .user-page .date {
-//   margin-left: 10px;
-// }
-// .user-page .time {
-//   margin-left: 10px;
-// }
-// .user-page .place {
-//   margin-left: 10px;
-// }

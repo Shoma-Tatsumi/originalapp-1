@@ -24,7 +24,9 @@
       </tbody>
     </table>
     <% if current_user.id == @user.id %>
-      <%= link_to "編集", edit_user_path(@user.id), class: "user-edit-btn" %>
+      <%= link_to edit_user_path(@user.id), class: "user-edit-btn" do %>
+        <i class="fas fa-user-edit">編集</i>
+      <% end %>
     <% end %>
     </div>
   </div>

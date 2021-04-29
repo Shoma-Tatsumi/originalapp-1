@@ -2,7 +2,9 @@
 <header class='top-page-header'>
   <div class='nav'>
     <div class='title'>
-      <%=link_to '新たな始まりを　フットサルから', '/' ,class: 'top-title' %>
+      <%=link_to '/' ,class: 'top-title' do %>
+        <i class="fas fa-hands-helping"></i>新たな始まりを フットサルから<i class="fas fa-hands-helping"></i>
+      <% end %>
     </div>
     <ul class='lists-right'>
       <% if user_signed_in? %>

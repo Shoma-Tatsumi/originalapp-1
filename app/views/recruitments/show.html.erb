@@ -1,5 +1,15 @@
 <%= render "shared/header" %>
 <div class="recruitment-details">
+  <div class='button'>
+  <% if current_user.id == @recruitment.user_id %>
+    <%= link_to '#', class: "recruitment-edit-btn" do %>
+      <i class="far fa-edit">編集</i>
+    <% end %>
+    <%= link_to '#', class: "recruitment-delete-btn" do %>
+      <i class="far fa-trash-alt">削除</i>
+    <% end %>
+  <% end %>
+  </div>
   <table class="detail-table">
     <tbody>
       <tr>
@@ -8,7 +18,7 @@
       </tr>
       <tr>
         <th class="detail-item">投稿者</th>
-        <td class="detail-value"><%= @recruitment.user.nickname %></td>
+        <td class="detail-value"><%= link_to @recruitment.user.nickname, "/users/#{@recruitment.user_id}" %></td>
       </tr>
       <tr>
         <th class="detail-item">日程</th>
@@ -36,10 +46,15 @@
       </tr>
     </tbody>
   </table>
-  <div class='button'>
-  <% if current_user.id == @recruitment.user_id %>
-    <%= link_to "編集", '#', class: "recruitment-edit-btn" %>
-    <%= link_to "削除", '#', class: "recruitment-delete-btn" %>
-  <% end %>
+  <div class="option">
+    <div class="back-btn">
+      <%= link_to :back do %>
+        <i class="fas fa-arrow-circle-left">一覧へ戻る</i>
+      <% end %>
+    </div>
+        <div class="favorite-btn">
+      <i class="far fa-thumbs-up"></i>
+      <span>参加したい</span>
+    </div>
   </div>
 </div>
