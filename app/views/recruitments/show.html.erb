@@ -3,36 +3,36 @@
   <table class="detail-table">
     <tbody>
       <tr>
-        <th class="detail-item">投稿日(更新日)</th>
-        <td class="detail-value"><%= '#(#)' %></td>
+        <th class="detail-item">投稿日時(更新日時)</th>
+        <td class="detail-value"><%= l @recruitment.created_at %> ( <%= l @recruitment.updated_at %> )</td>
       </tr>
       <tr>
         <th class="detail-item">投稿者</th>
-        <td class="detail-value"><%= '#' %></td>
+        <td class="detail-value"><%= @recruitment.user.nickname %></td>
       </tr>
       <tr>
         <th class="detail-item">日程</th>
-        <td class="detail-value"><%= '#' %></td>
+        <td class="detail-value"><%= @recruitment.event_date %></td>
       </tr>
       <tr>
         <th class="detail-item">時間</th>
-        <td class="detail-value"><%= '# ~ #' %></td>
+        <td class="detail-value"><%= l @recruitment.start_time, format: :short %> ~ <%= l @recruitment.end_time, format: :short %></td>
       </tr>
       <tr>
         <th class="detail-item">場所</th>
-        <td class="detail-value"><%= '#' %></td>
+        <td class="detail-value"><%= @recruitment.place %></td>
       </tr>
       <tr>
         <th class="detail-item">募集人数</th>
-        <td class="detail-value"><%= '#' %></td>
+        <td class="detail-value"><%= @recruitment.number_of_people %></td>
       </tr>
       <tr>
         <th class="detail-item">募集レベル</th>
-        <td class="detail-value"><%= '#' %></td>
+        <td class="detail-value"><%= @recruitment.category.name %></td>
       </tr>
       <tr>
         <th class="detail-item">備考</th>
-        <td class="detail-value-intro"><%= '#' %></td>
+        <td class="detail-value-intro"><%= @recruitment.description %></td>
       </tr>
     </tbody>
   </table>

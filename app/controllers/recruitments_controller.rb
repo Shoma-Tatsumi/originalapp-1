@@ -20,6 +20,7 @@ class RecruitmentsController < ApplicationController
   end
 
   def show
+    @recruitment = Recruitment.find(params[:id])
   end
 
   private
