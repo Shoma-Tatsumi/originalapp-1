@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class RecruitmentsController < ApplicationController
-  before_action :set_recruitment, only: %i[show edit update]
+  before_action :set_recruitment, only: %i[show edit update destroy]
   
   def index
     @prefecture_id = params[:prefecture_id].to_i
@@ -36,6 +36,7 @@ class RecruitmentsController < ApplicationController
   end
 
   def destroy
+    redirect_to prefecture_recruitments_path if @recruitment.destroy
   end
 
   private
