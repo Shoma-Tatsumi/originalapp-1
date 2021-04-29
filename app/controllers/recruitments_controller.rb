@@ -35,6 +35,9 @@ class RecruitmentsController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
   private
 
   def recruitment_params
