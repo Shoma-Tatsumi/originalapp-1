@@ -24,6 +24,7 @@ class RecruitmentsController < ApplicationController
   end
 
   def edit
+    @recruitment = Recruitment.find(params[:id])
   end
 
   def update

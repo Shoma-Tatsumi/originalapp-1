@@ -1,0 +1,71 @@
+<%= render "shared/header" %>
+<div class='recruiting-page'>
+  <div class='recruiting-page__inner'>
+    <div class='recruiting-page__inner--left recruiting-page__header'>
+      <h2>Edit Recruiting</h2>
+      <h5>募集情報編集</h5>
+      <%=link_to '募集詳細へ戻りたい方はこちら', prefecture_recruitment_path, class: 'nav-index'%> 
+    </div>
+    <div class='recruiting-page__inner--right recruiting-form'>
+      <%= form_with model: @recruitment, url: prefecture_recruitments_path, local: true do |f| %>
+
+      <%= render 'shared/error_messages', model: f.object %>
+
+      <div class='field'>
+        <div class='field-label'>
+          <%= f.label :event_date, "日付"%>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='field-input'>
+          <%= f.date_field :event_date, min: Date.current, autofocus: true %>
+        </div>
+        <div class='field-label'>
+          <%= f.label :start_time, "開始時間"%>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='field-input'>
+          <%= f.time_field :start_time %>
+        </div>
+        <div class='field-label'>
+          <%= f.label :end_time, "終了時間"%>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='field-input'>
+          <%= f.time_field :end_time %>
+        </div>
+        <div class='field-label'>
+          <%= f.label :place, "場所（名称）"%>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='field-input'>
+          <%= f.text_field :place, placeholder:"例) 〇〇グラウンド" %>
+        </div>
+        <div class='field-label'>
+          <%= f.label :number_of_people, "募集人数"%>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='field-input'>
+          <%= f.text_field :number_of_people, placeholder:"例) 5(半角数字のみ)" %>
+        </div>
+        <div class='field-label'>
+          <%= f.label :category_id, "募集レベル"%>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='field-input'>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+        </div>
+        <div class='field-label'>
+          <%= f.label :description, "備考"%>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='field-input'>
+          <%= f.text_area :description, class: 'form-text-area', placeholder:"募集詳細（持ち物、募集人数、金額、注意点など）", size: "46x10" %>
+        </div>
+        <div class="recruiting-btn-contents">
+         <%= f.submit "募集する" ,class:"btn" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

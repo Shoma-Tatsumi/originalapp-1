@@ -2,7 +2,7 @@
 <div class="recruitment-details">
   <div class='button'>
   <% if current_user.id == @recruitment.user_id %>
-    <%= link_to '#', class: "recruitment-edit-btn" do %>
+    <%= link_to edit_prefecture_recruitment_path, class: "recruitment-edit-btn" do %>
       <i class="far fa-edit">編集</i>
     <% end %>
     <%= link_to '#', class: "recruitment-delete-btn" do %>
@@ -48,7 +48,7 @@
   </table>
   <div class="option">
     <div class="back-btn">
-      <%= link_to :back do %>
+      <%= link_to prefecture_recruitments_path do %>
         <i class="fas fa-arrow-circle-left">一覧へ戻る</i>
       <% end %>
     </div>
