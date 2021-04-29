@@ -1,0 +1,63 @@
+.recruitment-details {
+  height: 90vh;
+  padding: 20px;
+}
+
+.recruitment-details .detail-table {
+  margin: 20px auto;
+  width: 40%;
+}
+
+.recruitment-details .detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.recruitment-details .detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.recruitment-details .detail-value-intro {
+  height: 200px;
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+  word-break: break-word;
+}
+
+.recruitment-details .button {
+  width: 30vw;
+  display: flex;
+  margin: 0 auto;
+}
+
+.recruitment-details .recruitment-edit-btn {
+  text-align: center;
+  background-color: darkcyan;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  width: 15vw;
+  margin: 20px;
+  padding: 2vh 5vw;
+}
+
+.recruitment-details .recruitment-delete-btn {
+  text-align: center;
+  background-color: darksalmon;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+  width: 15vw;
+  margin: 20px;
+  padding: 2vh 5vw;
+}

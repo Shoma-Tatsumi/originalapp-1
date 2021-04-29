@@ -1,0 +1,45 @@
+<%= render "shared/header" %>
+<div class="recruitment-details">
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-item">投稿日(更新日)</th>
+        <td class="detail-value"><%= '#(#)' %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">投稿者</th>
+        <td class="detail-value"><%= '#' %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">日程</th>
+        <td class="detail-value"><%= '#' %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">時間</th>
+        <td class="detail-value"><%= '# ~ #' %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">場所</th>
+        <td class="detail-value"><%= '#' %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">募集人数</th>
+        <td class="detail-value"><%= '#' %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">募集レベル</th>
+        <td class="detail-value"><%= '#' %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">備考</th>
+        <td class="detail-value-intro"><%= '#' %></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class='button'>
+  <% if current_user.id == @recruitment.user_id %>
+    <%= link_to "編集", '#', class: "recruitment-edit-btn" %>
+    <%= link_to "削除", '#', class: "recruitment-delete-btn" %>
+  <% end %>
+  </div>
+</div>
