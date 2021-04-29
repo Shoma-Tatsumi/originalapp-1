@@ -24,7 +24,9 @@
       </tbody>
     </table>
     <% if current_user.id == @user.id %>
-      <%= link_to "編集", edit_user_path(@user.id), class: "user-edit-btn" %>
+      <%= link_to edit_user_path(@user.id), class: "user-edit-btn" do %>
+        <i class="fas fa-user-edit">編集</i>
+      <% end %>
     <% end %>
     </div>
   </div>
@@ -42,7 +44,7 @@
           <div class="place">場所: <%= recruitment.place %></div>
         </div>
         <div class="details-icon">
-          <%= link_to '#' do %>
+          <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}" do %>
             <i class="fas fa-angle-double-down"></i>
           <% end %>
         </div>

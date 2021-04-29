@@ -26,6 +26,10 @@
   font-size: 20px;
 }
 
+.fa-hands-helping::before{
+  margin: 0 5px;
+}
+
 .lists-right {
   display: flex;
   list-style: none;

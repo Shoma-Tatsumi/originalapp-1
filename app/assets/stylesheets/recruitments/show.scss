@@ -1,0 +1,109 @@
+.recruitment-details {
+  height: 90vh;
+  padding: 20px;
+}
+
+.recruitment-details .button {
+  width: 30vw;
+  display: flex;
+  margin: 0 auto;
+}
+
+.recruitment-details .recruitment-edit-btn {
+  border-radius: 40px;
+  background-color: darkcyan;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+  width: 15vw;
+  margin: 10px 20px;
+  padding: 2vh 5vw;
+}
+
+.fa-edit::before, .fa-trash-alt::before{
+  margin-right: 5px;
+}
+
+.recruitment-details .recruitment-delete-btn {
+  border-radius: 40px;
+  background-color: darksalmon;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+  width: 15vw;
+  margin: 10px 20px;
+  padding: 2vh 5vw;
+}
+
+.recruitment-details .detail-table {
+  margin: 20px auto;
+  width: 40%;
+}
+
+.recruitment-details .detail-item {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.recruitment-details .detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.recruitment-details .detail-value-intro {
+  height: 200px;
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+  word-break: break-word;
+}
+
+.option {
+  width: 30vw;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  position: relative;
+}
+
+.back-btn {
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+
+  padding: 1vh 0;
+  color: darkcyan;
+  border: 2px solid darkcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.back-btn a{
+  text-decoration: none;
+}
+
+.favorite-btn {
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+  color: rgb(249, 75, 0);
+  border: 2px solid #ffb340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.fa-arrow-circle-left::before, .fa-thumbs-up::before {
+  margin-right: 5px;
+}

@@ -1,0 +1,60 @@
+<%= render "shared/header" %>
+<div class="recruitment-details">
+  <div class='button'>
+  <% if current_user.id == @recruitment.user_id %>
+    <%= link_to '#', class: "recruitment-edit-btn" do %>
+      <i class="far fa-edit">編集</i>
+    <% end %>
+    <%= link_to '#', class: "recruitment-delete-btn" do %>
+      <i class="far fa-trash-alt">削除</i>
+    <% end %>
+  <% end %>
+  </div>
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-item">投稿日時(更新日時)</th>
+        <td class="detail-value"><%= l @recruitment.created_at %> ( <%= l @recruitment.updated_at %> )</td>
+      </tr>
+      <tr>
+        <th class="detail-item">投稿者</th>
+        <td class="detail-value"><%= link_to @recruitment.user.nickname, "/users/#{@recruitment.user_id}" %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">日程</th>
+        <td class="detail-value"><%= @recruitment.event_date %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">時間</th>
+        <td class="detail-value"><%= l @recruitment.start_time, format: :short %> ~ <%= l @recruitment.end_time, format: :short %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">場所</th>
+        <td class="detail-value"><%= @recruitment.place %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">募集人数</th>
+        <td class="detail-value"><%= @recruitment.number_of_people %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">募集レベル</th>
+        <td class="detail-value"><%= @recruitment.category.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-item">備考</th>
+        <td class="detail-value-intro"><%= @recruitment.description %></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="option">
+    <div class="back-btn">
+      <%= link_to :back do %>
+        <i class="fas fa-arrow-circle-left">一覧へ戻る</i>
+      <% end %>
+    </div>
+        <div class="favorite-btn">
+      <i class="far fa-thumbs-up"></i>
+      <span>参加したい</span>
+    </div>
+  </div>
+</div>

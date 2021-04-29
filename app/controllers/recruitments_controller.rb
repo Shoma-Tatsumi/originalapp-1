@@ -19,6 +19,10 @@ class RecruitmentsController < ApplicationController
     end
   end
 
+  def show
+    @recruitment = Recruitment.find(params[:id])
+  end
+
   private
 
   def recruitment_params
