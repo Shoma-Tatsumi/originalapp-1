@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class RecruitmentsController < ApplicationController
+  before_action :set_recruitment, only: %i[show edit update]
+  
   def index
     @prefecture_id = params[:prefecture_id].to_i
     @recruitments = Recruitment.where(prefecture_id: @prefecture_id).page(params[:page]).per(5)
@@ -20,14 +22,17 @@ class RecruitmentsController < ApplicationController
   end
 
   def show
-    @recruitment = Recruitment.find(params[:id])
   end
 
   def edit
-    @recruitment = Recruitment.find(params[:id])
   end
 
   def update
+    if @recruitment.update(recruitment_params)
+      redirect_to prefecture_recruitment_path
+    else
+      render :edit
+    end
   end
 
   private
@@ -37,4 +42,9 @@ class RecruitmentsController < ApplicationController
       user_id: current_user.id, prefecture_id: params[:prefecture_id]
     )
   end
+  
+  def set_recruitment
+    @recruitment = Recruitment.find(params[:id])
+  end
+
 end

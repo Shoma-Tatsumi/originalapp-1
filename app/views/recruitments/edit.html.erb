@@ -7,7 +7,7 @@
       <%=link_to '募集詳細へ戻りたい方はこちら', prefecture_recruitment_path, class: 'nav-index'%> 
     </div>
     <div class='recruiting-page__inner--right recruiting-form'>
-      <%= form_with model: @recruitment, url: prefecture_recruitments_path, local: true do |f| %>
+      <%= form_with model: @recruitment, url: prefecture_recruitment_path, local: true do |f| %>
 
       <%= render 'shared/error_messages', model: f.object %>
 
