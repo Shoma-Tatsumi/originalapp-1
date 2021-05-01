@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'comments/create'
   devise_for :users
   root 'prefectures#index'
   resources :prefectures, only: :index do
