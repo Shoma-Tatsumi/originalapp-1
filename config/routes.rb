@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'prefectures#index'
   resources :prefectures, only: :index do
-    resources :recruitments, only: %i[index new create show edit update destroy]
+    resources :recruitments, only: %i[index new create show edit update destroy] do
+      resources :comments, only: :create
+    end
   end
   resources :users, only: %i[show edit update]
 end
