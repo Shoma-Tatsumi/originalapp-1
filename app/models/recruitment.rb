@@ -7,7 +7,9 @@ class Recruitment < ApplicationRecord
   validate :start_end_time
 
   extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :user
   belongs_to :category
+  has_many :comments
 
   with_options presence: true do
     validates :event_date
