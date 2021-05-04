@@ -21,7 +21,10 @@ class RecruitmentsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @comment = Comment.new
+    @comments = @recruitment.comments.includes(:user)
+  end
 
   def edit; end
 

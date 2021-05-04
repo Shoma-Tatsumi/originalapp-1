@@ -1,6 +1,11 @@
 .recruitment-details {
-  height: 90vh;
   padding: 20px;
+  display: flex;
+}
+
+// 募集詳細
+.recruitment-detail {
+  width: 50vw;
 }
 
 .recruitment-details .button {
@@ -20,7 +25,7 @@
   padding: 2vh 5vw;
 }
 
-.fa-edit::before, .fa-trash-alt::before{
+.fa-edit::before, .fa-trash-alt::before, .fa-comments::before {
   margin-right: 5px;
 }
 
@@ -37,11 +42,11 @@
 
 .recruitment-details .detail-table {
   margin: 20px auto;
-  width: 40%;
+  width: 80%;
 }
 
 .recruitment-details .detail-item {
-  width: 20%;
+  width: 25%;
   background-color: #eee;
   border: 1px solid #dedede;
   font-size: 14px;
@@ -70,8 +75,7 @@
   width: 30vw;
   display: flex;
   margin: 0 auto;
-  justify-content: space-between;
-  position: relative;
+  justify-content: center;
 }
 
 .back-btn {
@@ -106,4 +110,60 @@
 
 .fa-arrow-circle-left::before, .fa-thumbs-up::before {
   margin-right: 5px;
+}
+
+// コメント
+.recruitment-comment {
+  width: 50vw;
+}
+
+.comment-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.comment-box {
+  width: 80%;
+  height: 600px;
+  border: solid 2px #dedede;
+  resize: none;
+  background-color: #fff;
+  padding: 0 5px;
+  margin: 20px auto;
+  text-align: left;
+  overflow: scroll;
+  word-break: break-word;
+}
+
+.comment-header {
+  display: flex;
+}
+
+.container form {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.comment-text {
+  width: 90%;
+  height: 50px;
+  padding: auto;
+  border: solid 2px #dedede;
+  resize: none;
+  margin-right: 10px;
+}
+
+.comment-btn {
+  line-height: 48px;
+  background-color: #3CCACE;
+  border: 1px solid #3CCACE;
+  color: #fff;
+  width: 50px;
+  font-size: 18px;
+  border-radius: 100px;
+  padding: auto 0;
+  margin-left: 10px;
 }
