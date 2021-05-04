@@ -43,7 +43,7 @@
         </tr>
         <tr>
           <th class="detail-item">備考</th>
-          <td class="detail-value-intro"><%= @recruitment.description %></td>
+          <td class="detail-value-intro"><%= simple_format(@recruitment.description) %></td>
         </tr>
       </tbody>
     </table>
@@ -65,22 +65,21 @@
     </div>
       <div class="comment-box">
         <% @comments.each do |comment| %>
+          <div class="comment-header">
+            <div class='comment-contributor'><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %></div>
+            <div class='comment-created-at'><%= l comment.created_at %></div>
+          </div>
           <p>
-            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-            <%= comment.text %>
+            <%= simple_format(comment.text) %>
           </p>
         <% end %>
       </div>
       <div class="container">
-        <% if user_signed_in? %>
-          <%= form_with model: [@recruitment, @comment], url: "/prefectures/#{@recruitment.prefecture_id}/recruitments/#{@recruitment.id}/comments",　class: "comment-submit", local: true do |f| %>
-            <%= f.text_area :text, class: "comment-text", placeholder: "コメントする", rows: "2" %>
-            <button type="submit" class="comment-btn">
-              <i class="far fa-paper-plane"></i>
-            </button>
-          <% end %>
-        <% else %>
-          <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <%= form_with model: [@recruitment, @comment], url: "/prefectures/#{@recruitment.prefecture_id}/recruitments/#{@recruitment.id}/comments",　class: "comment-submit", local: true do |f| %>
+          <%= f.text_area :text, class: "comment-text", placeholder: "コメントする", rows: "2", required: true %>
+          <button type="submit" class="comment-btn">
+            <i class="far fa-paper-plane"></i>
+          </button>
         <% end %>
       </div>
   </div>

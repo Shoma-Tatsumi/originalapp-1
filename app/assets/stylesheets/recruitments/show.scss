@@ -119,35 +119,41 @@
 
 .comment-title {
   text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 .comment-box {
   width: 80%;
-  height: 500px;
+  height: 600px;
   border: solid 2px #dedede;
   resize: none;
   background-color: #fff;
-  margin: 5vh auto;
+  padding: 0 5px;
+  margin: 20px auto;
   text-align: left;
+  overflow: scroll;
+  word-break: break-word;
 }
 
-.container {
-  text-align: center;
+.comment-header {
+  display: flex;
 }
 
-.comment-submit {
-  // display: flex;
-  // justify-content: space-around;
-  // align-items: center;
+.container form {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .comment-text {
-  width: 70%;
+  width: 90%;
   height: 50px;
   padding: auto;
   border: solid 2px #dedede;
   resize: none;
-
+  margin-right: 10px;
 }
 
 .comment-btn {
@@ -155,9 +161,9 @@
   background-color: #3CCACE;
   border: 1px solid #3CCACE;
   color: #fff;
-  width: 30px;
-  min-width: 30px;
+  width: 50px;
   font-size: 18px;
   border-radius: 100px;
   padding: auto 0;
+  margin-left: 10px;
 }
