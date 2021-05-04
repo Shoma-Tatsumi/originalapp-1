@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class RecruitmentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_recruitment, only: %i[show edit update destroy]
 
   def index
