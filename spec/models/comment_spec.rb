@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
@@ -20,12 +22,12 @@ RSpec.describe Comment, type: :model do
       it 'ユーザーが紐付いていなければコメントできない' do
         @comment.user = nil
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("User must exist")
+        expect(@comment.errors.full_messages).to include('User must exist')
       end
       it '募集が紐付いていなければコメントできない' do
         @comment.recruitment = nil
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("Recruitment must exist")
+        expect(@comment.errors.full_messages).to include('Recruitment must exist')
       end
     end
   end

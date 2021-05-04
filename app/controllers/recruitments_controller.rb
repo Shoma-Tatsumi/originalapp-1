@@ -23,7 +23,7 @@ class RecruitmentsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = @recruitment.comments.includes(:user) 
+    @comments = @recruitment.comments.includes(:user)
   end
 
   def edit; end
