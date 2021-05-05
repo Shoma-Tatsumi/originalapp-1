@@ -5,7 +5,24 @@
 .top-page-header {
   height: 10vh;
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-page-second-header {
+  height: 10vh;
+  width: 100vw;
+  padding: 2vh 10vw;
+  display: flex;
+  flex-direction: column;
+  background-color: darkcyan;
+}
+
+.top-page-third-header {
+  height: 10vh;
+  width: 100vw;
+  padding: 2vh 10vw;
   display: flex;
   flex-direction: column;
   background-color: darkcyan;
@@ -48,24 +65,46 @@
 .logout {
   text-decoration: none;
   color: white;
-  border: 1px white solid;
+  /* border: 1px white solid;
   border-radius: 3px;
-  padding: 0.4em 1.6em;
+  padding: 0.4em 1.6em; */
 }
 
 .login {
   text-decoration: none;
   margin-right: 3vw;
   color: white;
-  border: 1px white solid;
+  /* border: 1px white solid;
   border-radius: 3px;
-  padding: 0.4em 1.6em;
+  padding: 0.4em 1.6em; */
 }
 
 .sign-up {
   text-decoration: none;
   color: white;
-  border: 1px white solid;
+  /* border: 1px white solid;
   border-radius: 3px;
-  padding: 0.4em 1.6em;
+  padding: 0.4em 1.6em; */
+}
+
+/* レスポンシブル対応(タブレット) */
+@media (max-width: 1024px) {
+  .top-title {
+    font-size: 16px;
+  }
+
+  .nav {
+    font-size: 14px;
+  }
+}
+
+/* レスポンシブル対応(スマホ) */
+@media (max-width: 600px) {
+  .top-title {
+    font-size: 14px;
+  }
+
+  .nav {
+    font-size: 12px;
+  }
 }

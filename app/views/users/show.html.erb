@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render "shared/second-header" %>
 <div class="user-page">
   <div class="user-info">
     <%# User details %>
@@ -19,7 +19,7 @@
         </tr>
         <tr>
           <th class="detail-item">紹介文</th>
-          <td class="detail-value-intro"><%= @user.introduction %></td>
+          <td class="detail-value-intro"><%= simple_format(@user.introduction) %></td>
         </tr>
       </tbody>
     </table>

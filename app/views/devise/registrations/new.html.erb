@@ -1,4 +1,4 @@
-<%= render "shared/second-header"%>
+<%= render "shared/third-header"%>
 <div class='account-page' id='account-page'>
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
@@ -51,7 +51,7 @@
             <%= f.label :age, "年齢"%>
           </div>
           <div class='field-input'>
-            <%= f.text_field :age, placeholder:"例) 27(半角数字のみ)", autocomplete: "off"%>
+            <%= f.text_field :age, placeholder: "例) 27(半角数字のみ)", type: "number", autocomplete: "off"%>
           </div>
         </div>
         <div class='field'>
@@ -73,7 +73,7 @@
         <div class='actions'>
           <%= f.submit "Create Account", class: 'btn'%>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
