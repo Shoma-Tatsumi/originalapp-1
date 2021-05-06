@@ -6,7 +6,7 @@
       <%= link_to edit_prefecture_recruitment_path, class: "recruitment-edit-btn" do %>
         <i class="far fa-edit">編集</i>
       <% end %>
-      <%= link_to prefecture_recruitment_path, class: "recruitment-delete-btn", method: :delete do %>
+      <%= link_to prefecture_recruitment_path, class: "recruitment-delete-btn", method: :delete, data: { confirm: "【確認】募集を削除してもよろしいですか？" } do %>
         <i class="far fa-trash-alt">削除</i>
       <% end %>
     <% end %>
