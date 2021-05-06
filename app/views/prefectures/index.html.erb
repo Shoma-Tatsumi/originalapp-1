@@ -1,143 +1,145 @@
+<div id="home" class="big-bg">
 <%= render "shared/header" %>
-<div class='main'>
-  <div class='app-description'>
-    <ul class='description-lists'>
-      <li class='description-list'>
-        <h2 class='description-text'>
-          このアプリケーションは<br>
-          フットサルしたい人・してみたい人同士をマッチングします
-        </h2>
-        <%= image_tag "fotsal-intro01.png", class:"list-pict" %>
-      </li>
-      <li class='description-list'>
-        <%= image_tag "fotsal-intro02.png", class:"list-pict" %>
-        <h2 class='description-text'>
-          フットサルを通じて、様々な人との交流の場を生み出します<br>
-          そこでの交流が、後に何か新しいものを生み出すきっかけに...<br>
-        </h2>
-      </li>
-      <li class='description-list'>
-        <h2 class='description-text'>
-          さぁ！！！フットサルから新しい一歩を踏み出しましょう！！！
-        </h2>
-        <%= image_tag "fotsal-intro03.png", class:"list-pict" %>
-      </li>
-    </ul>
-  </div>
-    <div class='japan-map'>
-    <div class='map-text'>
-      \\都道府県を選択してくだい//
+  <div class='main'>
+    <div class='app-description'>
+      <ul class='description-lists'>
+        <li class='description-list'>
+          <h2 class='description-text'>
+            このアプリケーションは<br>
+            フットサルしたい人・してみたい人同士をマッチングします
+          </h2>
+          <%= image_tag "fotsal-intro01.png", class:"list-pict" %>
+        </li>
+        <li class='description-list'>
+          <%= image_tag "fotsal-intro02.png", class:"list-pict" %>
+          <h2 class='description-text'>
+            フットサルを通じて、様々な人との交流の場を生み出します<br>
+            そこでの交流が、後に何か新しいものを生み出すきっかけに...<br>
+          </h2>
+        </li>
+        <li class='description-list'>
+          <h2 class='description-text'>
+            さぁ！！！フットサルから新しい一歩を踏み出しましょう！！！
+          </h2>
+          <%= image_tag "fotsal-intro03.png", class:"list-pict" %>
+        </li>
+      </ul>
     </div>
-    <div class='map-prefecture'>
-      <%= image_tag "prefecture01.png", size: '546x506', class: "map" %>
-      <span class="area-btn area1" data-area="1">北海道・東北</span>
-      <span class="area-btn area2" data-area="2">関東</span>
-      <span class="area-btn area3" data-area="3">中部</span>
-      <span class="area-btn area4" data-area="4">近畿</span>
-      <span class="area-btn area5" data-area="5">中国・四国</span>
-      <span class="area-btn area6" data-area="6">九州・沖縄</span>
-      
-      <div class="area-overlay"></div>
-      <div class="pref-area">
-          <div class="pref-list" data-list="1">
-              <div data-id="1">北海道</div>
-              <div data-id="2">青森県</div>
-              <div data-id="3">岩手県</div>
-              <div data-id="4">宮城県</div>
-              <div data-id="5">秋田県</div>
-              <div data-id="6">山形県</div>
-              <div data-id="7">福島県</div>
-              <div></div>
-          </div>
-          
-          <div class="pref-list" data-list="2">
-              <div data-id="8">茨城県</div>
-              <div data-id="9">栃木県</div>
-              <div data-id="10">群馬県</div>
-              <div data-id="11">埼玉県</div>
-              <div data-id="12">千葉県</div>
-              <div data-id="13">東京都</div>
-              <div data-id="14">神奈川県</div>
-              <div></div>
-          </div>
-          
-          <div class="pref-list" data-list="3">
-              <div data-id="15">新潟県‎</div>
-              <div data-id="16">富山県‎</div>
-              <div data-id="17">石川県‎</div>
-              <div data-id="18">福井県‎</div>
-              <div data-id="19">山梨県‎</div>
-              <div data-id="20">長野県‎</div>
-              <div data-id="21">岐阜県</div>
-              <div data-id="22">静岡県</div>
-              <div data-id="23">愛知県‎</div>
-              <div></div>
-          </div>
-          
-          <div class="pref-list" data-list="4">
-              <div data-id="24">三重県</div>
-              <div data-id="25">滋賀県</div>
-              <div data-id="26">京都府</div>
-              <div data-id="27">大阪府</div>
-              <div data-id="28">兵庫県</div>
-              <div data-id="29">奈良県</div>
-              <div data-id="30">和歌山県</div>
-              <div></div>
-          </div>
-          
-          <div class="pref-list" data-list="5">
-              <div data-id="31">鳥取県</div>
-              <div data-id="32">島根県</div>
-              <div data-id="33">岡山県</div>
-              <div data-id="34">広島県</div>
-              <div data-id="35">山口県</div>
-              <div data-id="36">徳島県</div>
-              <div data-id="37">香川県</div>
-              <div data-id="38">愛媛県</div>
-              <div data-id="39">高知県</div>
-              <div></div>
-          </div>
-          
-          <div class="pref-list" data-list="6">
-              <div data-id="40">福岡県</div>
-              <div data-id="41">佐賀県</div>
-              <div data-id="42">長崎県</div>
-              <div data-id="43">熊本県</div>
-              <div data-id="44">大分県</div>
-              <div data-id="45">宮崎県</div>
-              <div data-id="46">鹿児島県</div>
-              <div data-id="47">沖縄県</div>
-          </div>
-          <script>
-            $(function(){
-              //地域を選択
-              $('.area-btn').click(function(){
-                  $('.area-overlay').show();
-                  $('.pref-area').show();
-                  var area = $(this).data('area');
-                  $('[data-list]').hide();
-                  $('[data-list="' + area + '"]').show();
+    <div class='japan-map'>
+      <div class='map-text'>
+        \\都道府県を選択してくだい//
+      </div>
+      <div class='map-prefecture'>
+        <%= image_tag "prefecture01.png", size: '546x506', class: "map" %>
+        <span class="area-btn area1" data-area="1">北海道・東北</span>
+        <span class="area-btn area2" data-area="2">関東</span>
+        <span class="area-btn area3" data-area="3">中部</span>
+        <span class="area-btn area4" data-area="4">近畿</span>
+        <span class="area-btn area5" data-area="5">中国・四国</span>
+        <span class="area-btn area6" data-area="6">九州・沖縄</span>
+        
+        <div class="area-overlay"></div>
+        <div class="pref-area">
+            <div class="pref-list" data-list="1">
+                <div data-id="1">北海道</div>
+                <div data-id="2">青森県</div>
+                <div data-id="3">岩手県</div>
+                <div data-id="4">宮城県</div>
+                <div data-id="5">秋田県</div>
+                <div data-id="6">山形県</div>
+                <div data-id="7">福島県</div>
+                <div></div>
+            </div>
+            
+            <div class="pref-list" data-list="2">
+                <div data-id="8">茨城県</div>
+                <div data-id="9">栃木県</div>
+                <div data-id="10">群馬県</div>
+                <div data-id="11">埼玉県</div>
+                <div data-id="12">千葉県</div>
+                <div data-id="13">東京都</div>
+                <div data-id="14">神奈川県</div>
+                <div></div>
+            </div>
+            
+            <div class="pref-list" data-list="3">
+                <div data-id="15">新潟県‎</div>
+                <div data-id="16">富山県‎</div>
+                <div data-id="17">石川県‎</div>
+                <div data-id="18">福井県‎</div>
+                <div data-id="19">山梨県‎</div>
+                <div data-id="20">長野県‎</div>
+                <div data-id="21">岐阜県</div>
+                <div data-id="22">静岡県</div>
+                <div data-id="23">愛知県‎</div>
+                <div></div>
+            </div>
+            
+            <div class="pref-list" data-list="4">
+                <div data-id="24">三重県</div>
+                <div data-id="25">滋賀県</div>
+                <div data-id="26">京都府</div>
+                <div data-id="27">大阪府</div>
+                <div data-id="28">兵庫県</div>
+                <div data-id="29">奈良県</div>
+                <div data-id="30">和歌山県</div>
+                <div></div>
+            </div>
+            
+            <div class="pref-list" data-list="5">
+                <div data-id="31">鳥取県</div>
+                <div data-id="32">島根県</div>
+                <div data-id="33">岡山県</div>
+                <div data-id="34">広島県</div>
+                <div data-id="35">山口県</div>
+                <div data-id="36">徳島県</div>
+                <div data-id="37">香川県</div>
+                <div data-id="38">愛媛県</div>
+                <div data-id="39">高知県</div>
+                <div></div>
+            </div>
+            
+            <div class="pref-list" data-list="6">
+                <div data-id="40">福岡県</div>
+                <div data-id="41">佐賀県</div>
+                <div data-id="42">長崎県</div>
+                <div data-id="43">熊本県</div>
+                <div data-id="44">大分県</div>
+                <div data-id="45">宮崎県</div>
+                <div data-id="46">鹿児島県</div>
+                <div data-id="47">沖縄県</div>
+            </div>
+            <script>
+              $(function(){
+                //地域を選択
+                $('.area-btn').click(function(){
+                    $('.area-overlay').show();
+                    $('.pref-area').show();
+                    var area = $(this).data('area');
+                    $('[data-list]').hide();
+                    $('[data-list="' + area + '"]').show();
+                });
+                //レイヤーをタップ
+                $('.area-overlay').click(function(){
+                    prefReset();
+                });
+                //都道府県をクリック
+                $('.pref-list [data-id]').click(function(){
+                    if($(this).data('id')){
+                        var id = $(this).data('id');
+                        window.location.href = '/prefectures/' + id + '/recruitments';
+                        prefReset();
+                    }
+                });
+                //表示リセット
+                function prefReset(){
+                    $('[data-list]').hide();
+                    $('.pref-area').hide();
+                    $('.area-overlay').hide();
+                }
               });
-              //レイヤーをタップ
-              $('.area-overlay').click(function(){
-                  prefReset();
-              });
-              //都道府県をクリック
-              $('.pref-list [data-id]').click(function(){
-                  if($(this).data('id')){
-                      var id = $(this).data('id');
-                      window.location.href = '/prefectures/' + id + '/recruitments';
-                      prefReset();
-                  }
-              });
-              //表示リセット
-              function prefReset(){
-                  $('[data-list]').hide();
-                  $('.pref-area').hide();
-                  $('.area-overlay').hide();
-              }
-            });
-          </script>
+            </script>
+        </div>
       </div>
     </div>
   </div>
