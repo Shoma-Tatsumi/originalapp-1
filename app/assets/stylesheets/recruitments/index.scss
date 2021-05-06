@@ -114,3 +114,47 @@
   background-color: #EAD9FF;
   height: 100px;
 }
+
+// フレキシブル対応
+@media (max-width: 1024px) {
+  .post-header h2 {
+    font-size: 20px;
+    margin: 0 auto;
+    border-bottom: 2px solid red;
+  }
+
+  .post-lists {
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}
+
+// フレキシブル対応
+@media (max-width: 600px) {
+  .recruiting-btn {
+    height: 80px;
+    width: 80px;
+    background: darkcyan;
+    text-align: center;
+    border-radius: 4%;
+    bottom: 22px;
+    right: 22px;
+    position: fixed;
+    padding: 5px;
+  }
+  
+  .recruiting-btn-text {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .recruiting-btn-icon {
+    width: 50%;
+    height: 50%;
+  }
+}
