@@ -7,7 +7,7 @@
 .recruitment-detail {
   width: 50vw;
 }
-
+// 編集ボタン
 .recruitment-details .button {
   width: 30vw;
   display: flex;
@@ -25,10 +25,6 @@
   padding: 2vh 5vw;
 }
 
-.fa-edit::before, .fa-trash-alt::before, .fa-comments::before {
-  margin-right: 5px;
-}
-
 .recruitment-details .recruitment-delete-btn {
   border-radius: 40px;
   background-color: darksalmon;
@@ -38,6 +34,10 @@
   width: 15vw;
   margin: 10px 20px;
   padding: 2vh 5vw;
+}
+
+.fa-edit::before, .fa-trash-alt::before, .fa-comments::before {
+  margin-right: 5px;
 }
 
 .recruitment-details .detail-table {
@@ -140,6 +140,12 @@
   display: flex;
 }
 
+.comment-created-at {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
 .container form {
   width: 80%;
   display: flex;
@@ -166,4 +172,21 @@
   border-radius: 100px;
   padding: auto 0;
   margin-left: 10px;
+}
+
+// フレキシブル対応
+@media (max-width: 1024px) {
+  .recruitment-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recruitment-detail, .recruitment-comment {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .comment-box {
+    height: 300px;
+  }
 }
