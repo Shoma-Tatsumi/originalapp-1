@@ -14,7 +14,6 @@
 }
 
 .user-icon {
-  height: 25vh;
   padding: 20px 0;
   text-align: center;
   border-bottom: 2px solid #dedede;
@@ -31,7 +30,6 @@
 }
 
 .user-details {
-  height: 50vh;
   padding: 20px;
 }
 
@@ -113,4 +111,27 @@
 
 .user-page .content {
   padding: 5px;
+}
+
+// レスポンシブ対応
+@media (max-width: 1024px) {
+  .user-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .user-info {
+    width: 60vw;
+    border: none;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  .user-page .user-post-contents {
+    width: 60vw;
+    padding: 0 20px;
+    margin: 0 auto
+  }
+  .user-page .post-lists {
+    width: 60vw;
+    padding: 20px;
+  }
 }
