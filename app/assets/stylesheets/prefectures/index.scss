@@ -2,17 +2,25 @@ a {
   text-decoration: none;
 }
 
+.big-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+#home {
+  background-image: image-url('background01.png');
+}
+
 .main {
-  background: white;
   display: flex;
   justify-content: space-between;
-  background-image: image-url('background01.png');
 }
 
 /* application説明 */
 .app-description {
   height: 90vh;
   width: 50vw;
+  padding: 10px;
 }
 
 .description-lists {
@@ -26,11 +34,12 @@ a {
 }
 
 .description-text {
-  color: darkcyan;
+  color: white;
 }
 
 .list-pict {
   width: 10vw;
+  margin: 0 1vw;
 }
 
 /* 日本地図DOM */
@@ -43,8 +52,9 @@ a {
 }
 
 .map-text {
-  color: darkcyan;
+  color: white;
   height: 50px;
+  margin-top: 2vh;
 }
 
 .map-prefecture {
@@ -154,5 +164,43 @@ a {
   /* スマホユーザー向けにボタン文字サイズを調整 */
   .japan-map .area-btn{
       font-size: 4vw;
+  }
+}
+
+  /* レスポンシブル対応(タブレット) */
+@media (max-width: 1024px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+  }
+
+  .app-description {
+    height: 75vh;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .description-list {
+    height: 25vh;
+  }
+}
+
+/* レスポンシブル対応(スマホ) */
+@media (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  .app-description {
+    height: 60vh;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .description-list {
+    height: 20vh;
   }
 }

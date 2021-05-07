@@ -1,5 +1,5 @@
 .recruiting-page .recruiting-page__inner {
-  width: 980px;
+  width: 80vw;
   margin: 60px auto;
   padding: 60px;
   background-color: #fff;
@@ -67,18 +67,16 @@
 }
 
 .recruiting-page .select-box {
-  width:429px;
+  width: 100%;
   height: 48px;
   padding: 10px;
 }
 
 .recruiting-page .form-text-area {
-  resize: vertical;
-  width:429px;
+  width: 100%;
   height: 150px;
-  min-height:100px;
-  max-height:300px;
   padding: 10px;
+  resize: none;
 }
 
 /* 下部ボタン */
@@ -97,4 +95,45 @@
   margin-top: 20px;
   color: #fff;
   background-color: darkcyan;
+}
+
+// フレキシブル対応
+@media (max-width: 1024px) {
+  .recruiting-page .recruiting-page__inner {
+    width: 90vw;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recruiting-page .recruiting-page__header h2 {
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  .recruiting-page__inner--right {
+    margin-top: 10px;
+  }
+
+  .recruiting-page .field .field-input input {
+    width: 40vw;
+    padding: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .recruiting-page .select-box {
+    width: 40vw;
+    height: 48px;
+    padding: 10px;
+  }
+
+  .recruiting-page .form-text-area {
+    resize: vertical;
+    width: 60vw;
+    height: 150px;
+    resize: none;
+    padding: 10px;
+  }
 }

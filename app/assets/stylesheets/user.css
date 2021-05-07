@@ -72,17 +72,15 @@
 }
 
 .account-page .select-box {
-  width:429px;
+  width: 429px;
   height: 48px;
   padding: 10px;
 }
 
 .account-page .form_text_area {
-  resize: vertical;
-  width:429px;
+  width: 429px;
   height: 150px;
-  min-height:100px;
-  max-height:300px;
+  resize: none;
   padding: 10px;
 }
 
@@ -146,4 +144,49 @@
 .login-flash-message {
   text-align: center;
   color: red;
+}
+
+/* レスポンシブル対応 */
+@media (max-width: 1024px) {
+  .account-page .account-page__inner {
+    width: 90vw;
+    margin: 60px auto;
+    padding: 60px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account-page .account-page__header h2 {
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  .account-page .account-page__inner .account-page__inner--right {
+    margin-top: 20px;
+  }
+
+  .account-page .field .field-input input {
+    width: 40vw;
+    padding: 10px;
+    letter-spacing: 1px;
+  }
+
+  .account-page .select-box {
+    width: 40vw;
+    height: 48px;
+    padding: 10px;
+  }
+  
+  .account-page .form_text_area {
+    resize: vertical;
+    width: 70vw;
+    height: 150px;
+    resize: none;
+    padding: 10px;
+  }
 }

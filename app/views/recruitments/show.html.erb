@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render "shared/second-header" %>
 <div class="recruitment-details">
   <div class="recruitment-detail">
     <div class='button'>
@@ -6,7 +6,7 @@
       <%= link_to edit_prefecture_recruitment_path, class: "recruitment-edit-btn" do %>
         <i class="far fa-edit">編集</i>
       <% end %>
-      <%= link_to prefecture_recruitment_path, class: "recruitment-delete-btn", method: :delete do %>
+      <%= link_to prefecture_recruitment_path, class: "recruitment-delete-btn", method: :delete, data: { confirm: "【確認】募集を削除してもよろしいですか？" } do %>
         <i class="far fa-trash-alt">削除</i>
       <% end %>
     <% end %>
@@ -14,8 +14,8 @@
     <table class="detail-table">
       <tbody>
         <tr>
-          <th class="detail-item">投稿日時(更新日時)</th>
-          <td class="detail-value"><%= l @recruitment.created_at %> ( <%= l @recruitment.updated_at %> )</td>
+          <th class="detail-item">投稿日時<br>(更新日時)</th>
+          <td class="detail-value"><%= l @recruitment.created_at %><br>( <%= l @recruitment.updated_at %> )</td>
         </tr>
         <tr>
           <th class="detail-item">投稿者</th>
