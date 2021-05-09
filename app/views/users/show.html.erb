@@ -3,7 +3,11 @@
   <div class="user-info">
     <%# User details %>
     <div class="user-icon">
-      <%= image_tag "icon01.png", class:"icon-pict" %>
+      <% if @user.image.attached? %>
+        <%= image_tag @user.image.variant(resize: '180x180'), class: "icon-pict" %>
+      <% else %>
+        <%= image_tag @user.image, class:"icon-pict" %>
+      <% end %>
       <p class="user-icon-nickname"><%= @user.nickname %></p>
     </div>
     <div class="user-details">
