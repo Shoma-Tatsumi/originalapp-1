@@ -50,41 +50,34 @@
 .lists-right {
   display: flex;
   list-style: none;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .user-nickname {
   text-decoration: none;
-  margin-right: 3vw;
   color: white;
   font-weight: bold;
 }
 
+.lists-right .icon-pict {
+  margin: 0 20px 0 2px;
+}
 
 .logout {
   text-decoration: none;
   color: white;
-  /* border: 1px white solid;
-  border-radius: 3px;
-  padding: 0.4em 1.6em; */
 }
 
 .login {
   text-decoration: none;
   margin-right: 3vw;
   color: white;
-  /* border: 1px white solid;
-  border-radius: 3px;
-  padding: 0.4em 1.6em; */
 }
 
 .sign-up {
   text-decoration: none;
   color: white;
-  /* border: 1px white solid;
-  border-radius: 3px;
-  padding: 0.4em 1.6em; */
 }
 
 /* レスポンシブル対応(タブレット) */
@@ -106,5 +99,10 @@
 
   .nav {
     font-size: 12px;
+  }
+
+  .lists-right .icon-pict {
+    width: 20px;
+    height: 20px;
   }
 }
