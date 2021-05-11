@@ -61,6 +61,16 @@
   text-align: center;
 }
 
+.recruitment-details .detail-value .detail-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-user .icon-pict {
+  margin: 0; 
+}
+
 .recruitment-details .detail-value-intro {
   height: 200px;
   width: 80%;
@@ -138,6 +148,10 @@
 
 .comment-header {
   display: flex;
+}
+
+.comment-contributor-image .icon-pict {
+  margin: 5px 2px 0;
 }
 
 .comment-created-at {

@@ -8,7 +8,12 @@
       <li class='list' id="lists">
         <div class="content">
           <div class='content-header'>
-            <%=link_to recruitment.user.nickname, user_path(recruitment.user_id), class: 'recruiting-user' %>
+            <%=link_to recruitment.user.nickname, user_path(recruitment.user_id), class: 'recruiting-user'%>
+            <% if recruitment.user.image.attached? %>
+              <%= image_tag recruitment.user.image.variant(resize: '20x20'), class: "icon-pict" %>
+            <% else %>
+              <%= image_tag 'icon01.png', size: '20x20', class:"icon-pict" %>
+            <% end %>
             <div class='created-at'>投稿日時: <%= l recruitment.created_at %></div>
           </div>
           <div class="content-info">

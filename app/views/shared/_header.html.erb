@@ -9,7 +9,11 @@
     <ul class='lists-right'>
       <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "user-nickname" %></li>
-        <li><%= image_tag current_user.image.variant(resize: '25x25'), class: "icon-pict" %></li>
+        <% if current_user.image.attached? %>
+          <li><%= image_tag current_user.image.variant(resize: '25x25'), class: "icon-pict" %></li>
+        <% else %>
+          <li><%= image_tag 'icon01.png', size: '25x25', class:"icon-pict" %></li>
+        <% end %>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
