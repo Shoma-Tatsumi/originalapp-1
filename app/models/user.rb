@@ -5,6 +5,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :recruitments
   has_many :comments
+  has_one_attached :image
 
   validates :nickname, presence: true
 
