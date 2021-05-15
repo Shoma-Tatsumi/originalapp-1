@@ -91,11 +91,14 @@
         <% end %>
       </div>
       <div class="container">
-        <%= form_with model: [@recruitment, @comment], url: "/prefectures/#{@recruitment.prefecture_id}/recruitments/#{@recruitment.id}/comments",　class: "comment-submit", local: true do |f| %>
-          <%= f.text_area :text, class: "comment-text", placeholder: "コメントする", rows: "2", required: true %>
-          <button type="submit" class="comment-btn">
-            <i class="far fa-paper-plane"></i>
-          </button>
+        <%= form_with model: [@recruitment, @comment], url: "/prefectures/#{@recruitment.prefecture_id}/recruitments/#{@recruitment.id}/comments", class: "comment-submit", local: true do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
+          <div class="comment-form">
+              <%= f.text_area :text, class: "comment-text", placeholder: "コメントする", rows: "2", required: true %>
+              <button type="submit" class="comment-btn">
+                <i class="far fa-paper-plane"></i>
+              </button>
+          </div>
         <% end %>
       </div>
   </div>
