@@ -2,8 +2,14 @@
 
 class CommentsController < ApplicationController
   def create
-    comment = Comment.create(comment_params)
-    redirect_to "/prefectures/#{comment.recruitment.prefecture_id}/recruitments/#{comment.recruitment.id}"
+    @recruitment = Recruitment.find(params[:recruitment_id])
+    @comment = Comment.create(comment_params)
+    @comments = @recruitment.comments.includes(:user)
+    if @comment.save
+      redirect_to "/prefectures/#{@comment.recruitment.prefecture_id}/recruitments/#{@comment.recruitment.id}"
+    else
+      render 'recruitments/show'
+    end
   end
 
   private

@@ -13,9 +13,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :password,
-            format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i, message: 'Include both letters and numbers.' }, on: :create
+            format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,}+\z/i, message: 'は半角文字と半角数字の両方を含めてください' }, on: :create
 
-  validates :age, numericality: { only_integer: true, message: 'Half-width number' }
+  # validates :age, numericality: { only_integer: true, message: '半角数字のみ' }
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :years_of_experience

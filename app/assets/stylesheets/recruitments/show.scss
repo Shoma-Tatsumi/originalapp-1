@@ -160,11 +160,14 @@
   margin-left: 5px;
 }
 
-.container form {
-  width: 80%;
+.comment-form {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+}
+
+.comment-form textarea{
+  width: 30vw;
 }
 
 .comment-text {
