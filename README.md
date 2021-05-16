@@ -1,10 +1,10 @@
 # 🤝 新たな始まりを フットサルから
 ### フットサルを通じて 人と人が繋がれるアプリケーション
 
-[![Image from Gyazo](https://i.gyazo.com/1f7713a454cebf0536660092a153cde9.jpg)](https://gyazo.com/1f7713a454cebf0536660092a153cde9)
+[![Image from Gyazo](https://i.gyazo.com/ef0718c6dad3f1f90ee3a3cc357e3e1c.jpg)](https://gyazo.com/ef0718c6dad3f1f90ee3a3cc357e3e1c)
 
 <br></br>
-# 💭　概要
+# 💭 概要
 
 ### 一緒に運動をすると仲良くなりやすい
 
