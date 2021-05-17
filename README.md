@@ -23,7 +23,7 @@
 #### `☆ 都道府県を選択し一覧画面へ遷移する`
 #### `☆ 新規投稿は右下アイコンをクリック`
 #### `☆ 投稿完了後は一覧画面へ戻る`<br>
-[![Image from Gyazo](https://i.gyazo.com/6d437c80cd7e0fba5156862abdd56355.gif)](https://gyazo.com/6d437c80cd7e0fba5156862abdd56355)
+[![Image from Gyazo](https://i.gyazo.com/1dfec44e4d8458e11bdc603f1c34a32c.gif)](https://gyazo.com/1dfec44e4d8458e11bdc603f1c34a32c)
 [![Image from Gyazo](https://i.gyazo.com/2ef9987b74f02bf8ea6583bdd325d2aa.gif)](https://gyazo.com/2ef9987b74f02bf8ea6583bdd325d2aa)
 <br>
 #### `☆ 一覧画面から１つの投稿を選択 → 投稿詳細画面へ遷移する`
