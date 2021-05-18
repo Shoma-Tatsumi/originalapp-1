@@ -26,6 +26,11 @@
              <i class="fas fa-angle-double-down"></i>
             <% end %>
           </div>
+          <% if recruitment.event_date < Date.today %>
+            <div class='recruitment-end'>
+              <span>募集終了</span>
+            </div>
+          <% end %>
         </div>
       </li>
     <% end %>

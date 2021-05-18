@@ -22,13 +22,17 @@
 }
 
 .list {
-  border: 2px solid #dedede;
   height: 130px;
   margin-bottom: 20px;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
 .content {
   padding: 5px;
+  position: relative;
 }
 
 .content-header {
@@ -64,7 +68,20 @@
   text-align: center;
 }
 
-.fa-angle-double-down {
+.recruitment-end {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  background-color: crimson;
+  transform: skewY(-7deg);
+}
+
+.recruitment-end span {
+  color: #FFF;
+  font-size: 18px;
+  font: bold;
 }
 
 // pagination
