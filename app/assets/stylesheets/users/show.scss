@@ -8,7 +8,6 @@
 }
 
 .user-info {
-  border-right: 2px solid #dedede;
   width: 40vw;
   padding: 0 20px;
 }
@@ -105,13 +104,37 @@
 }
 
 .user-page .list {
-  border: 1px solid #dedede;
   height: 110px;
   margin-bottom: 20px;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
-.user-page .content {
+.user-page .content-header {
   padding: 5px;
+  display: block;
+}
+
+.user-page .details-icon {
+  margin: 50px 0 0;
+}
+
+.user-page .recruitment-end {
+  position: absolute;
+  top: 36%;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  background-color: crimson;
+  transform: skewY(-7deg);
+}
+
+.user-page .recruitment-end span {
+  color: #FFF;
+  font-size: 18px;
+  font: bold;
 }
 
 // レスポンシブ対応

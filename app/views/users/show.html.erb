@@ -43,13 +43,20 @@
       <% @recruitments.each do |recruitment| %>
       <li class='list'>
         <div class="content">
-          <div class="date">日付: <%= recruitment.event_date %></div>
-          <div class="time">時刻: <%= l recruitment.start_time, format: :short %> ~ <%= l recruitment.end_time, format: :short %></div>
-          <div class="place">場所: <%= recruitment.place %></div>
-        </div>
-        <div class="details-icon">
-          <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}" do %>
-            <i class="fas fa-angle-double-down"></i>
+          <div class='content-header'>
+            <div class="date">日付: <%= recruitment.event_date %></div>
+            <div class="time">時刻: <%= l recruitment.start_time, format: :short %> ~ <%= l recruitment.end_time, format: :short %></div>
+            <div class="place">場所: <%= recruitment.place %></div>
+          </div>
+          <div class="details-icon">
+            <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}" do %>
+              <i class="fas fa-angle-double-down"></i>
+            <% end %>
+          </div>
+          <% if recruitment.event_date < Date.today %>
+            <div class='recruitment-end'>
+              <span>募集終了</span>
+            </div>
           <% end %>
         </div>
       </li>
