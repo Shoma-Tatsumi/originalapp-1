@@ -90,6 +90,7 @@
           </p>
         <% end %>
       </div>
+      <% if @recruitment.event_date > Date.today %>
       <div class="container">
         <%= form_with model: [@recruitment, @comment], url: "/prefectures/#{@recruitment.prefecture_id}/recruitments/#{@recruitment.id}/comments", class: "comment-submit", local: true do |f| %>
           <%= render 'shared/error_messages', model: f.object %>
@@ -101,5 +102,6 @@
           </div>
         <% end %>
       </div>
+      <% end %>
   </div>
 </div>
