@@ -82,7 +82,7 @@
 
 .user-page .user-post-contents {
   width: 60vw;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .user-page .user-post-header {
@@ -93,9 +93,30 @@
 }
 
 .user-page .user-post-header h2 {
-  font-size: 25px;
+  font-size: 22px;
   margin: 0 auto;
-  border-bottom: 2px solid red;
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px #5d627b;
+  border-bottom: solid 2px #5d627b;
+}
+
+.user-page .user-post-header h2:before, .user-page .user-post-header h2:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: #5d627b;
+}
+
+.user-page .user-post-header h2:before {
+  left: 7px;
+}
+
+.user-page .user-post-header h2:after {
+  right: 7px;
 }
 
 .user-page .post-lists {
