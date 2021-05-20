@@ -54,30 +54,34 @@
   align-items: center;
 }
 
-.user-nickname {
+.sign-up, .login, .user-nickname, .logout {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  margin-left: 20px;
+  display: inline-block;
+  position: relative;
 }
 
 .lists-right .icon-pict {
-  margin: 0 20px 0 2px;
+  margin-left: 5px;
 }
 
-.logout {
-  text-decoration: none;
-  color: white;
+.login::after, .sign-up::after, .user-nickname::after, .logout::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(243, 80%, 62%);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-.login {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: white;
-}
-
-.sign-up {
-  text-decoration: none;
-  color: white;
+.login:hover::after, .sign-up:hover::after, .user-nickname:hover::after, .logout:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* レスポンシブル対応(タブレット) */
