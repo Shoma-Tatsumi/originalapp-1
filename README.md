@@ -1,5 +1,5 @@
 # 🤝 新たな始まりを フットサルから
-### フットサルを通じて 人と人が繋がれるアプリケーション
+### フットサルを通じて 人と人を繋ぐアプリケーション
 
 [![Image from Gyazo](https://i.gyazo.com/ef0718c6dad3f1f90ee3a3cc357e3e1c.jpg)](https://gyazo.com/ef0718c6dad3f1f90ee3a3cc357e3e1c)
 
@@ -10,7 +10,7 @@
 
 私自身、フットサルを通じて関係性が向上したことや
 新しい友人ができ繋がりが増えた経験があったことから、
-多くの人に共有したいと思い製作しようと決めました。
+多くの人に共有したいと思い製作しました。
 
 <br></br>
 # 🌐  App URL
@@ -23,42 +23,43 @@
 #### `☆ 都道府県を選択し一覧画面へ遷移する`
 #### `☆ 新規投稿は右下アイコンをクリック`
 #### `☆ 投稿完了後は一覧画面へ戻る`<br>
-[![Image from Gyazo](https://i.gyazo.com/1dfec44e4d8458e11bdc603f1c34a32c.gif)](https://gyazo.com/1dfec44e4d8458e11bdc603f1c34a32c)
-[![Image from Gyazo](https://i.gyazo.com/2ef9987b74f02bf8ea6583bdd325d2aa.gif)](https://gyazo.com/2ef9987b74f02bf8ea6583bdd325d2aa)
+[![Image from Gyazo](https://i.gyazo.com/92bc1a6e21561eddf946a8692e0dcf90.gif)](https://gyazo.com/92bc1a6e21561eddf946a8692e0dcf90)
+[![Image from Gyazo](https://i.gyazo.com/2d558f322165c659c91b4c11c8b9ec10.gif)](https://gyazo.com/2d558f322165c659c91b4c11c8b9ec10)
 <br>
+
 #### `☆ 一覧画面から１つの投稿を選択 → 投稿詳細画面へ遷移する`
 #### `☆ 投稿者本人であれば投稿の編集・削除が投稿詳細画面から可能になる`<br>
-[![Image from Gyazo](https://i.gyazo.com/6078400ccb23cd2a9e47dafb6ff6ba10.gif)](https://gyazo.com/6078400ccb23cd2a9e47dafb6ff6ba10)
+[![Image from Gyazo](https://i.gyazo.com/716d37b558a638fe1cb59977ab03229c.gif)](https://gyazo.com/716d37b558a638fe1cb59977ab03229c)
 <br>
 
 #### `☆ 投稿詳細画面からコメントができる`<br>
-[![Image from Gyazo](https://i.gyazo.com/6b123b219a6ab8f50026f34c8233969b.gif)](https://gyazo.com/6b123b219a6ab8f50026f34c8233969b)
+[![Image from Gyazo](https://i.gyazo.com/9bbb0e28b95e754e23abe237baba0c21.gif)](https://gyazo.com/9bbb0e28b95e754e23abe237baba0c21)
 
 <br></br>
 # ✅ 課題解決
-| ユーザーストーリーから考える課題                                                        | 課題解決                                         |
+| ユーザーストーリーから考える課題                                                     | 課題解決                                         |
 | ------------------------------------------------------------------------------- | ------------------------------------------------- |
-| フットサルができる場所・相手を見つけたいという課題                                          | 開催場所（都道府県）ごとに募集をみることができる機能 |
+| どこでもフットサルができる場所・相手を見つけたいという課題                                          | 開催場所（都道府県）ごとに募集をみることができる機能 |
 | 募集している相手の情報を知りたいという課題                                            | ユーザー詳細ページを表示する機能 |
-| 参加したい先が見つかったが、参加について詳細を聞きたいという課題                                  | 質問やコメントが入力できる機能 |
+| 参加したい先が見つかったが、参加について詳細を聞きたいという課題                                  | 質問が入力できるコメント機能 |
 
 <br></br>
 # 📦  機能一覧
 | 機能           | 概要             |
 | -------------- | -----------------|
 | ユーザー管理機能  | 新規登録・ログイン・ログアウトが可能  |
-| 投稿機能 | 画像付きで日記投稿が可能 |
-| 投稿詳細表示機能 | 各投稿詳細が詳細ページで閲覧可能 |
-| 投稿編集・削除機能 | 投稿者本人のみ投稿編集・削除が可能 |
-| ユーザー詳細表示機能 | 各ユーザーのプロフィール・投稿一覧が閲覧可能 |
+| 募集機能 | 募集が可能 |
+| 募集詳細表示機能 | 各募集詳細が詳細ページで閲覧可能 |
+| 募集編集・削除機能 | 投稿者本人のみ募集編集・削除が可能<br>募集日を過ぎると削除のみ可能 |
+| ユーザー詳細表示機能 | 各ユーザーのプロフィール・募集一覧が閲覧可能 |
 | ユーザー情報編集機能 | ログイン中のユーザーでアカウント本人であればプロフィール編集が可能 |
-| コメント機能 | ログイン中のユーザーで投稿内容に対しコメントすることができる |
+| コメント機能 | ログイン中のユーザーで投稿内容に対しコメントすることができる<br>募集日をすぎるとコメント不可 |
 
 <br></br>
 # 🔨 追加予定機能
+- いいね(参加希望)機能追加予定
 - 検索機能
 - フォロー/フォロワー機能追加予定
-- いいね機能追加予定
 
 <br></br>
 # 🚜 開発環境
@@ -73,12 +74,6 @@
 
 <br></br>
 # DB設計
-
-## prefectures table
-
-### Association
-- has-one :recruitment
-
 
 ## users table
 
@@ -100,17 +95,16 @@
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| event-date       | date       | null: false                    |
+| event_date       | date       | null: false                    |
 | start_time       | integer    | null: false                    |
 | end_time         | integer    | null: false                    |
-| place_id         | integer    | null: false                    |
+| place            | string     | null: false                    |
 | category_id      | integer    | null: false                    |
 | description      | text       | null: false                    |
-| prefecture       | references | null: false, foreign_key: true |
+| prefecture       | integer    | null: false                    |
 | user             | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :prefecture
 - belongs_to :user
 - has_many :comments
 

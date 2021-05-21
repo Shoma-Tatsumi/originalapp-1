@@ -18,7 +18,7 @@ a {
 
 /* application説明 */
 .app-description {
-  height: 90vh;
+  height: calc(100vh - 60px);
   width: 50vw;
   padding: 10px;
 }
