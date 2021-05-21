@@ -149,8 +149,13 @@
   display: flex;
 }
 
+.comment-contributor-image {
+  display: flex;
+  align-items: center;
+}
+
 .comment-contributor-image .icon-pict {
-  margin: 5px 2px 0;
+  margin: auto 2px;
 }
 
 .comment-created-at {

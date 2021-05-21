@@ -80,7 +80,7 @@
               <% if comment.user.image.attached? %>
                 <%= image_tag comment.user.image.variant(resize: '25x25'), class: "icon-pict" %>
               <% else %>
-                <%= image_tag 'icon01.png', class:"icon-pict" %>
+                <%= image_tag 'icon01.png', class:"icon-pict", size: '20x20' %>
               <% end %>
             </div>
             <div class='comment-created-at'><%= l comment.created_at %></div>
