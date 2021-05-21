@@ -3,7 +3,7 @@
 }
 
 .top-page-header {
-  height: 100px;
+  height: 60px;
   width: 100vw;
   padding: 2vh 5vw;
   display: flex;
@@ -21,7 +21,7 @@
 }
 
 .top-page-third-header {
-  height: 10vh;
+  height: 60px;
   width: 100vw;
   padding: 2vh 10vw;
   display: flex;
