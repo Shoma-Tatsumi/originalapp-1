@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class RecruitmentsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_recruitment, only: %i[show edit update destroy]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @prefecture_id = params[:prefecture_id].to_i
@@ -51,5 +51,11 @@ class RecruitmentsController < ApplicationController
 
   def set_recruitment
     @recruitment = Recruitment.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end
