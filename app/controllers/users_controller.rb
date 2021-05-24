@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :move_to_index, except: [:show]
+  before_action :authenticate_user!, only: %i[edit update]
   
   def show
     @user = User.find(params[:id])
