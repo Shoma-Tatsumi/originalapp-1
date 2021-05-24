@@ -2,7 +2,9 @@
 
 class RecruitmentsController < ApplicationController
   before_action :set_recruitment, only: %i[show edit update destroy]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :authenticate_user!, only: %i[new]
+  before_action :move_to_index, except: %i[index show]
+  
 
   def index
     @prefecture_id = params[:prefecture_id].to_i
