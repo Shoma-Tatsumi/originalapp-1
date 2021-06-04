@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :prefectures, only: :index do
     resources :recruitments do
       resources :comments, only: :create
+      resources :likes, only: %i[create destroy]
     end
   end
   resources :users, only: %i[show edit update]
