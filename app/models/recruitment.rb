@@ -2,6 +2,8 @@
 
 class Recruitment < ApplicationRecord
   belongs_to :user
+  has_many :likes
+  has_many :liked_users, through: :likes, source: :user
 
   validate :event_date_cannot_be_in_the_past
   validate :start_end_time
