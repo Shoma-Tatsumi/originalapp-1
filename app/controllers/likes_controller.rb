@@ -5,7 +5,8 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @like = Like.find_by(recruitment_id: params[recruitment_id], user_id: current_user.id)
+    @recruitment = Recruitment.find(params[:recruitment_id])
+    @like = Like.find_by(recruitment_id: @recruitment.id)
     @like.destroy
     redirect_back(fallback_location: root_path)
   end
