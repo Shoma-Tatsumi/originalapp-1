@@ -2,8 +2,7 @@
 
 class Recruitment < ApplicationRecord
   belongs_to :user
-  has_many :likes
-  has_many :liked_users, through: :likes, source: :user
+  has_many :likes, dependent: :destroy
 
   validate :event_date_cannot_be_in_the_past
   validate :start_end_time
@@ -32,5 +31,9 @@ class Recruitment < ApplicationRecord
     if start_time.present? && end_time.present? && start_time > end_time
       errors.add(:end_time, "は開始時刻より遅く選択して下さい")
     end
+  end
+
+  def liked_by?(recruitment)
+    likes.where(user_id: user.id).exists?
   end
 end
