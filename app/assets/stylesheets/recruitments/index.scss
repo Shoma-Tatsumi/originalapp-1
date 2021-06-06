@@ -71,21 +71,11 @@ a {
   margin: 0 2px;
 }
 
-.content-info {
-  margin-left: 10px;
+.content-header .favorite-btn {
+  margin: 0 0 0 auto;
 }
 
-.created-at {
-  margin-left: 10px;
-}
-
-.date {  
-  margin-left: 10px;
-}
-.time {
-  margin-left: 10px;
-}
-.place {
+.content-info, .created-at, .date, .time, .place{
   margin-left: 10px;
 }
 
@@ -100,7 +90,7 @@ a {
   width: 100%;
   text-align: center;
   background-color: crimson;
-  transform: skewY(-7deg);
+  transform: skewY(-6deg);
 }
 
 .recruitment-end span {
