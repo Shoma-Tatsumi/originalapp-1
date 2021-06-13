@@ -15,18 +15,7 @@
               <%= image_tag 'icon01.png', size: '20x20', class:"icon-pict" %>
             <% end %>
             <div class='created-at'>投稿日時: <%= l recruitment.created_at %></div>
-            <div class="favorite-btn">
-              <% if current_user.already_liked?(recruitment) %>
-                <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}/likes", method: :delete do %>
-                  <span>参加したい</span><i class="fas fa-thumbs-up"></i>
-                <% end %>
-              <% else %>
-                <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}/likes", method: :post do %>
-                  <span>参加したい</span><i class="far fa-thumbs-up"></i>
-                <% end %>
-              <% end %>
-              <%= recruitment.likes.count %>
-            </div>
+            <%= render partial: "favorite_btn", locals: { recruitment: recruitment } %>
           </div>
           <div class="content-info">
             <div class="date">日付: <%= recruitment.event_date %></div>
