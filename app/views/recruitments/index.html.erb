@@ -15,6 +15,7 @@
               <%= image_tag 'icon01.png', size: '20x20', class:"icon-pict" %>
             <% end %>
             <div class='created-at'>投稿日時: <%= l recruitment.created_at %></div>
+            <%= render partial: "favorite_btn", locals: { recruitment: recruitment } %>
           </div>
           <div class="content-info">
             <div class="date">日付: <%= recruitment.event_date %></div>

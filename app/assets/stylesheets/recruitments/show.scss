@@ -91,7 +91,6 @@
   border-radius: 40px;
   width: 15vw;
   min-width: 200px;
-
   padding: 1vh 0;
   color: darkcyan;
   border: 2px solid darkcyan;
@@ -103,24 +102,23 @@
 
 .back-btn a{
   text-decoration: none;
+  color: darkcyan;
 }
 
-.favorite-btn {
+.option .favorite-btn {
   border-radius: 40px;
   width: 15vw;
   min-width: 200px;
-  color: rgb(249, 75, 0);
   border: 2px solid #ffb340;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 20px;
 }
-
+// icon設定
 .fa-arrow-circle-left::before, .fa-thumbs-up::before {
-  margin-right: 5px;
+  margin: 0 5px;
 }
-
 // コメント
 .recruitment-comment {
   width: 50vw;

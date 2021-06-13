@@ -27,6 +27,7 @@ class RecruitmentsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @recruitment.comments.includes(:user)
+    @like = Like.new
   end
 
   def edit; end
