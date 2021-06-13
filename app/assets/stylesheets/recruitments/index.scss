@@ -75,6 +75,11 @@ a {
   margin: 0 0 0 auto;
 }
 
+.favorite-btn span {
+  text-decoration: none;
+  color: rgb(249, 75, 0);
+}
+
 .content-info, .created-at, .date, .time, .place{
   margin-left: 10px;
 }
