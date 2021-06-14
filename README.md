@@ -54,10 +54,10 @@
 | ユーザー詳細表示機能 | 各ユーザーのプロフィール・募集一覧が閲覧可能 |
 | ユーザー情報編集機能 | ログイン中のユーザーでアカウント本人であればプロフィール編集が可能 |
 | コメント機能 | ログイン中のユーザーで投稿内容に対しコメントすることができる<br>募集日をすぎるとコメント不可 |
+| いいね機能 | 参加したい募集にいいね機能を押すことができる |
 
 <br></br>
 # 🔨 追加予定機能
-- いいね(参加希望)機能追加予定
 - 検索機能
 - フォロー/フォロワー機能追加予定
 
@@ -89,6 +89,7 @@
 ### Association
 - has_many :recruitments
 - has_many :comments
+- has_many :likes
 
 
 ## recruitments table
@@ -107,6 +108,7 @@
 ### Association
 - belongs_to :user
 - has_many :comments
+- has_many :likes
 
 
 ## commentsテーブル
@@ -114,6 +116,18 @@
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
 | text        | text       | null: false                    |
+| user        | references | null: false, foreign_key: true |
+| recruitment | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :recruitment
+
+
+## likes table
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
 | user        | references | null: false, foreign_key: true |
 | recruitment | references | null: false, foreign_key: true |
 
