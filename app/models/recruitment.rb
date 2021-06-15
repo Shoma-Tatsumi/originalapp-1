@@ -34,6 +34,6 @@ class Recruitment < ApplicationRecord
   end
 
   def liked_by?(recruitment)
-    likes.where(user_id: user.id).exists?
+    likes.where(user_id: current_user.id).exists?
   end
 end
