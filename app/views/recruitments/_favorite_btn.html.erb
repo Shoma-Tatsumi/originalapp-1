@@ -1,19 +1,26 @@
-<% if user_signed_in? %>
-  <div class="favorite-btn">
-    <% if current_user.already_liked?(recruitment) %>
-      <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}/likes", method: :delete do %>
-        <span>参加したい</span><i class="fas fa-thumbs-up"></i>
-      <% end %>
-    <% else %>
-      <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}/likes", method: :post do %>
-        <span>参加したい</span><i class="far fa-thumbs-up"></i>
-      <% end %>
-    <% end %>
-    <%= recruitment.likes.count %>
-  </div>
-<% else %>
+<% if Date.today > recruitment.event_date %>
   <div class="favorite-btn">
     <span>参加したい</span><i class="far fa-thumbs-up"></i>
     <%= recruitment.likes.count %>
   </div>
+<% else %>
+  <% if user_signed_in? %>
+    <div class="favorite-btn">
+      <% if current_user.already_liked?(recruitment) %>
+        <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}/likes", method: :delete do %>
+          <span>参加したい</span><i class="fas fa-thumbs-up"></i>
+        <% end %>
+      <% else %>
+        <%= link_to "/prefectures/#{recruitment.prefecture_id}/recruitments/#{recruitment.id}/likes", method: :post do %>
+          <span>参加したい</span><i class="far fa-thumbs-up"></i>
+        <% end %>
+      <% end %>
+      <%= recruitment.likes.count %>
+    </div>
+  <% else %>
+    <div class="favorite-btn">
+      <span>参加したい</span><i class="far fa-thumbs-up"></i>
+      <%= recruitment.likes.count %>
+    </div>
+  <% end %>
 <% end %>
