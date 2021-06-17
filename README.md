@@ -23,17 +23,23 @@
 #### `☆ 都道府県を選択し一覧画面へ遷移する`
 #### `☆ 新規投稿は右下アイコンをクリック`
 #### `☆ 投稿完了後は一覧画面へ戻る`<br>
-[![Image from Gyazo](https://i.gyazo.com/92bc1a6e21561eddf946a8692e0dcf90.gif)](https://gyazo.com/92bc1a6e21561eddf946a8692e0dcf90)
-[![Image from Gyazo](https://i.gyazo.com/2d558f322165c659c91b4c11c8b9ec10.gif)](https://gyazo.com/2d558f322165c659c91b4c11c8b9ec10)
+[![Image from Gyazo](https://i.gyazo.com/300e21e4b6cc34fd70fd86373b70d21f.gif)](https://gyazo.com/300e21e4b6cc34fd70fd86373b70d21f)
+[![Image from Gyazo](https://i.gyazo.com/fe21c1467e554e5bda8175fc267837f9.gif)](https://gyazo.com/fe21c1467e554e5bda8175fc267837f9)
 <br>
 
 #### `☆ 一覧画面から１つの投稿を選択 → 投稿詳細画面へ遷移する`
 #### `☆ 投稿者本人であれば投稿の編集・削除が投稿詳細画面から可能になる`<br>
-[![Image from Gyazo](https://i.gyazo.com/716d37b558a638fe1cb59977ab03229c.gif)](https://gyazo.com/716d37b558a638fe1cb59977ab03229c)
+[![Image from Gyazo](https://i.gyazo.com/c7175413d907b442ba648604f42e5984.gif)](https://gyazo.com/c7175413d907b442ba648604f42e5984)
 <br>
 
 #### `☆ 投稿詳細画面からコメントができる`<br>
-[![Image from Gyazo](https://i.gyazo.com/9bbb0e28b95e754e23abe237baba0c21.gif)](https://gyazo.com/9bbb0e28b95e754e23abe237baba0c21)
+[![Image from Gyazo](https://i.gyazo.com/63e245ebd1a300dc25704d38fa046291.gif)](https://gyazo.com/63e245ebd1a300dc25704d38fa046291)
+<br>
+
+#### `☆ 募集一覧・募集詳細画面からいいねができる`<br>
+[![Image from Gyazo](https://i.gyazo.com/e7eacb33145cc8d77ce1db11d2c1ab00.gif)](https://gyazo.com/e7eacb33145cc8d77ce1db11d2c1ab00)
+
+
 
 <br></br>
 # ✅ 課題解決
@@ -42,6 +48,7 @@
 | どこでもフットサルができる場所・相手を見つけたいという課題                                          | 開催場所（都道府県）ごとに募集をみることができる機能 |
 | 募集している相手の情報を知りたいという課題                                            | ユーザー詳細ページを表示する機能 |
 | 参加したい先が見つかったが、参加について詳細を聞きたいという課題                                  | 質問が入力できるコメント機能 |
+| 参加者側は参加したい募集をチェックし保存しておく課題<br>募集側は参加希望者数はどの程度いるか確認する課題 | 募集に対していいねを押せるいいね機能 |
 
 <br></br>
 # 📦  機能一覧
@@ -54,7 +61,7 @@
 | ユーザー詳細表示機能 | 各ユーザーのプロフィール・募集一覧が閲覧可能 |
 | ユーザー情報編集機能 | ログイン中のユーザーでアカウント本人であればプロフィール編集が可能 |
 | コメント機能 | ログイン中のユーザーで投稿内容に対しコメントすることができる<br>募集日をすぎるとコメント不可 |
-| いいね機能 | 参加したい募集にいいね機能を押すことができる |
+| いいね機能 | 参加したい募集にいいね機能を押すことができ、もう一度押すと削除できる |
 
 <br></br>
 # 🔨 追加予定機能
